@@ -30,8 +30,6 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 var _utils = require('../utils');
 
-require('./Nestable.css');
-
 var _NestableItem = require('./NestableItem');
 
 var _NestableItem2 = _interopRequireDefault(_NestableItem);
