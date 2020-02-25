@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "22dc9159ceb0cea2cf8c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "81d9eadb31be6d8859b2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -583,7 +583,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(94);
+	module.exports = __webpack_require__(95);
 
 
 /***/ },
@@ -849,7 +849,7 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -1057,7 +1057,7 @@
 	var _prodInvariant = __webpack_require__(4);
 	
 	var DOMProperty = __webpack_require__(14);
-	var ReactDOMComponentFlags = __webpack_require__(64);
+	var ReactDOMComponentFlags = __webpack_require__(65);
 	
 	var invariant = __webpack_require__(2);
 	
@@ -1660,6 +1660,33 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright (c) 2016-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 *
+	 * 
+	 */
+	
+	'use strict';
+	
+	// Trust the developer to only use ReactInstrumentation with a __DEV__ check
+	
+	var debugTool = null;
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  var ReactDebugTool = __webpack_require__(145);
+	  debugTool = ReactDebugTool;
+	}
+	
+	module.exports = { debugTool: debugTool };
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1700,33 +1727,6 @@
 	module.exports = emptyFunction;
 
 /***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright (c) 2016-present, Facebook, Inc.
-	 *
-	 * This source code is licensed under the MIT license found in the
-	 * LICENSE file in the root directory of this source tree.
-	 *
-	 * 
-	 */
-	
-	'use strict';
-	
-	// Trust the developer to only use ReactInstrumentation with a __DEV__ check
-	
-	var debugTool = null;
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var ReactDebugTool = __webpack_require__(145);
-	  debugTool = ReactDebugTool;
-	}
-	
-	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1743,9 +1743,9 @@
 	var _prodInvariant = __webpack_require__(4),
 	    _assign = __webpack_require__(5);
 	
-	var CallbackQueue = __webpack_require__(62);
+	var CallbackQueue = __webpack_require__(63);
 	var PooledClass = __webpack_require__(15);
-	var ReactFeatureFlags = __webpack_require__(67);
+	var ReactFeatureFlags = __webpack_require__(68);
 	var ReactReconciler = __webpack_require__(18);
 	var Transaction = __webpack_require__(30);
 	
@@ -2029,7 +2029,7 @@
 	
 	var PooledClass = __webpack_require__(15);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	var warning = __webpack_require__(3);
 	
 	var didWarnForAddedNewProperty = false;
@@ -2634,7 +2634,7 @@
 	var canDefineProperty = __webpack_require__(33);
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 	
-	var REACT_ELEMENT_TYPE = __webpack_require__(84);
+	var REACT_ELEMENT_TYPE = __webpack_require__(85);
 	
 	var RESERVED_PROPS = {
 	  key: true,
@@ -2970,11 +2970,11 @@
 	
 	'use strict';
 	
-	var DOMNamespaces = __webpack_require__(40);
+	var DOMNamespaces = __webpack_require__(41);
 	var setInnerHTML = __webpack_require__(32);
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(47);
-	var setTextContent = __webpack_require__(81);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
+	var setTextContent = __webpack_require__(82);
 	
 	var ELEMENT_NODE_TYPE = 1;
 	var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -3091,7 +3091,7 @@
 	'use strict';
 	
 	var ReactRef = __webpack_require__(159);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	
 	var warning = __webpack_require__(3);
 	
@@ -3261,7 +3261,7 @@
 	
 	var _assign = __webpack_require__(5);
 	
-	var ReactBaseClasses = __webpack_require__(83);
+	var ReactBaseClasses = __webpack_require__(84);
 	var ReactChildren = __webpack_require__(189);
 	var ReactDOMFactories = __webpack_require__(190);
 	var ReactElement = __webpack_require__(16);
@@ -3276,9 +3276,9 @@
 	var cloneElement = ReactElement.cloneElement;
 	
 	if (process.env.NODE_ENV !== 'production') {
-	  var lowPriorityWarning = __webpack_require__(54);
+	  var lowPriorityWarning = __webpack_require__(55);
 	  var canDefineProperty = __webpack_require__(33);
-	  var ReactElementValidator = __webpack_require__(85);
+	  var ReactElementValidator = __webpack_require__(86);
 	  var didWarnPropTypesDeprecated = false;
 	  createElement = ReactElementValidator.createElement;
 	  createFactory = ReactElementValidator.createFactory;
@@ -3438,11 +3438,11 @@
 	var _prodInvariant = __webpack_require__(4);
 	
 	var EventPluginRegistry = __webpack_require__(27);
-	var EventPluginUtils = __webpack_require__(41);
-	var ReactErrorUtils = __webpack_require__(45);
+	var EventPluginUtils = __webpack_require__(42);
+	var ReactErrorUtils = __webpack_require__(46);
 	
-	var accumulateInto = __webpack_require__(74);
-	var forEachAccumulated = __webpack_require__(75);
+	var accumulateInto = __webpack_require__(75);
+	var forEachAccumulated = __webpack_require__(76);
 	var invariant = __webpack_require__(2);
 	
 	/**
@@ -3713,10 +3713,10 @@
 	'use strict';
 	
 	var EventPluginHub = __webpack_require__(21);
-	var EventPluginUtils = __webpack_require__(41);
+	var EventPluginUtils = __webpack_require__(42);
 	
-	var accumulateInto = __webpack_require__(74);
-	var forEachAccumulated = __webpack_require__(75);
+	var accumulateInto = __webpack_require__(75);
+	var forEachAccumulated = __webpack_require__(76);
 	var warning = __webpack_require__(3);
 	
 	var getListener = EventPluginHub.getListener;
@@ -3899,7 +3899,7 @@
 	
 	var SyntheticEvent = __webpack_require__(13);
 	
-	var getEventTarget = __webpack_require__(50);
+	var getEventTarget = __webpack_require__(51);
 	
 	/**
 	 * @interface UIEvent
@@ -4311,10 +4311,10 @@
 	
 	var EventPluginRegistry = __webpack_require__(27);
 	var ReactEventEmitterMixin = __webpack_require__(149);
-	var ViewportMetrics = __webpack_require__(73);
+	var ViewportMetrics = __webpack_require__(74);
 	
 	var getVendorPrefixedEventName = __webpack_require__(184);
-	var isEventSupported = __webpack_require__(51);
+	var isEventSupported = __webpack_require__(52);
 	
 	/**
 	 * Summary of `ReactBrowserEventEmitter` event handling:
@@ -4634,9 +4634,9 @@
 	'use strict';
 	
 	var SyntheticUIEvent = __webpack_require__(24);
-	var ViewportMetrics = __webpack_require__(73);
+	var ViewportMetrics = __webpack_require__(74);
 	
-	var getEventModifierState = __webpack_require__(49);
+	var getEventModifierState = __webpack_require__(50);
 	
 	/**
 	 * @interface MouseEvent
@@ -5063,12 +5063,12 @@
 	'use strict';
 	
 	var ExecutionEnvironment = __webpack_require__(7);
-	var DOMNamespaces = __webpack_require__(40);
+	var DOMNamespaces = __webpack_require__(41);
 	
 	var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 	var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(47);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
 	
 	// SVG temp container for IE lacking innerHTML
 	var reusableSVGContainer;
@@ -5191,7 +5191,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2016 Jed Watson.
+	  Copyright (c) 2017 Jed Watson.
 	  Licensed under the MIT License (MIT), see
 	  http://jedwatson.github.io/classnames
 	*/
@@ -5213,8 +5213,11 @@
 	
 				if (argType === 'string' || argType === 'number') {
 					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
+				} else if (Array.isArray(arg) && arg.length) {
+					var inner = classNames.apply(null, arg);
+					if (inner) {
+						classes.push(inner);
+					}
 				} else if (argType === 'object') {
 					for (var key in arg) {
 						if (hasOwn.call(arg, key) && arg[key]) {
@@ -5228,6 +5231,7 @@
 		}
 	
 		if (typeof module !== 'undefined' && module.exports) {
+			classNames.default = classNames;
 			module.exports = classNames;
 		} else if (true) {
 			// register as 'classnames', consistent with npm package name
@@ -5244,7 +5248,7 @@
 /* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(55)();
+	exports = module.exports = __webpack_require__(56)();
 	// imports
 	
 	
@@ -5258,7 +5262,7 @@
 /* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(55)();
+	exports = module.exports = __webpack_require__(56)();
 	// imports
 	
 	
@@ -5270,6 +5274,41 @@
 
 /***/ },
 /* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright (c) 2013-present, Facebook, Inc.
+	 *
+	 * This source code is licensed under the MIT license found in the
+	 * LICENSE file in the root directory of this source tree.
+	 */
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+	    Symbol.for &&
+	    Symbol.for('react.element')) ||
+	    0xeac7;
+	
+	  var isValidElement = function(object) {
+	    return typeof object === 'object' &&
+	      object !== null &&
+	      object.$$typeof === REACT_ELEMENT_TYPE;
+	  };
+	
+	  // By explicitly using `prop-types` you are opting into new development behavior.
+	  // http://fb.me/prop-types-in-prod
+	  var throwOnDirectAccess = true;
+	  module.exports = __webpack_require__(61)(isValidElement, throwOnDirectAccess);
+	} else {
+	  // By explicitly using `prop-types` you are opting into new production behavior.
+	  // http://fb.me/prop-types-in-prod
+	  module.exports = __webpack_require__(113)();
+	}
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 39 */
 /***/ function(module, exports) {
 
 	/**
@@ -5287,7 +5326,7 @@
 
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5303,11 +5342,11 @@
 	var DOMLazyTree = __webpack_require__(17);
 	var Danger = __webpack_require__(122);
 	var ReactDOMComponentTree = __webpack_require__(6);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(47);
+	var createMicrosoftUnsafeLocalFunction = __webpack_require__(48);
 	var setInnerHTML = __webpack_require__(32);
-	var setTextContent = __webpack_require__(81);
+	var setTextContent = __webpack_require__(82);
 	
 	function getNodeAfter(parentNode, node) {
 	  // Special case for text components, which return [open, close] comments
@@ -5516,7 +5555,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	/**
@@ -5538,7 +5577,7 @@
 	module.exports = DOMNamespaces;
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5553,7 +5592,7 @@
 	
 	var _prodInvariant = __webpack_require__(4);
 	
-	var ReactErrorUtils = __webpack_require__(45);
+	var ReactErrorUtils = __webpack_require__(46);
 	
 	var invariant = __webpack_require__(2);
 	var warning = __webpack_require__(3);
@@ -5767,7 +5806,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports) {
 
 	/**
@@ -5828,7 +5867,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5843,8 +5882,8 @@
 	
 	var _prodInvariant = __webpack_require__(4);
 	
-	var ReactPropTypesSecret = __webpack_require__(72);
-	var propTypesFactory = __webpack_require__(59);
+	var ReactPropTypesSecret = __webpack_require__(73);
+	var propTypesFactory = __webpack_require__(60);
 	
 	var React = __webpack_require__(19);
 	var PropTypes = propTypesFactory(React.isValidElement);
@@ -5969,7 +6008,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6016,7 +6055,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6097,7 +6136,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6114,7 +6153,7 @@
 	
 	var ReactCurrentOwner = __webpack_require__(12);
 	var ReactInstanceMap = __webpack_require__(23);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	var ReactUpdates = __webpack_require__(11);
 	
 	var invariant = __webpack_require__(2);
@@ -6334,7 +6373,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	/**
@@ -6368,7 +6407,7 @@
 	module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/**
@@ -6420,7 +6459,7 @@
 	module.exports = getEventCharCode;
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports) {
 
 	/**
@@ -6465,7 +6504,7 @@
 	module.exports = getEventModifierState;
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports) {
 
 	/**
@@ -6502,7 +6541,7 @@
 	module.exports = getEventTarget;
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6564,7 +6603,7 @@
 	module.exports = isEventSupported;
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports) {
 
 	/**
@@ -6608,7 +6647,7 @@
 	module.exports = shouldUpdateReactComponent;
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6623,7 +6662,7 @@
 	
 	var _assign = __webpack_require__(5);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	var warning = __webpack_require__(3);
 	
 	var validateDOMNesting = emptyFunction;
@@ -6982,7 +7021,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7050,7 +7089,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports) {
 
 	/*
@@ -7106,7 +7145,7 @@
 
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -7120,7 +7159,7 @@
 	 * @typechecks
 	 */
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	
 	/**
 	 * Upstream version of event listener. Does not take into account specific
@@ -7186,7 +7225,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports) {
 
 	/**
@@ -7215,7 +7254,7 @@
 	module.exports = focusNode;
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7256,7 +7295,7 @@
 	module.exports = getActiveElement;
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7272,7 +7311,7 @@
 	// Therefore we re-export development-only version with all the PropTypes checks here.
 	// However if one is migrating to the `prop-types` npm library, they will go through the
 	// `index.js` entry point, and it will branch depending on the environment.
-	var factory = __webpack_require__(60);
+	var factory = __webpack_require__(61);
 	module.exports = function(isValidElement) {
 	  // It is still allowed in 15.5.
 	  var throwOnDirectAccess = false;
@@ -7281,7 +7320,7 @@
 
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7293,13 +7332,31 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(9);
-	var invariant = __webpack_require__(2);
-	var warning = __webpack_require__(3);
 	var assign = __webpack_require__(5);
 	
-	var ReactPropTypesSecret = __webpack_require__(38);
-	var checkPropTypes = __webpack_require__(111);
+	var ReactPropTypesSecret = __webpack_require__(39);
+	var checkPropTypes = __webpack_require__(112);
+	
+	var printWarning = function() {};
+	
+	if (process.env.NODE_ENV !== 'production') {
+	  printWarning = function(text) {
+	    var message = 'Warning: ' + text;
+	    if (typeof console !== 'undefined') {
+	      console.error(message);
+	    }
+	    try {
+	      // --- Welcome to debugging React ---
+	      // This error was thrown as a convenience so that you can use this stack
+	      // to find the callsite that caused this warning to fire.
+	      throw new Error(message);
+	    } catch (x) {}
+	  };
+	}
+	
+	function emptyFunctionThatReturnsNull() {
+	  return null;
+	}
 	
 	module.exports = function(isValidElement, throwOnDirectAccess) {
 	  /* global Symbol */
@@ -7443,12 +7500,13 @@
 	      if (secret !== ReactPropTypesSecret) {
 	        if (throwOnDirectAccess) {
 	          // New behavior only for users of `prop-types` package
-	          invariant(
-	            false,
+	          var err = new Error(
 	            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
 	            'Use `PropTypes.checkPropTypes()` to call them. ' +
 	            'Read more at http://fb.me/use-check-prop-types'
 	          );
+	          err.name = 'Invariant Violation';
+	          throw err;
 	        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
 	          // Old behavior for people using React.PropTypes
 	          var cacheKey = componentName + ':' + propName;
@@ -7457,15 +7515,12 @@
 	            // Avoid spamming the console because they are often not actionable except for lib authors
 	            manualPropTypeWarningCount < 3
 	          ) {
-	            warning(
-	              false,
+	            printWarning(
 	              'You are manually calling a React.PropTypes validation ' +
-	              'function for the `%s` prop on `%s`. This is deprecated ' +
+	              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
 	              'and will throw in the standalone `prop-types` package. ' +
 	              'You may be seeing this warning due to a third-party PropTypes ' +
-	              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.',
-	              propFullName,
-	              componentName
+	              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
 	            );
 	            manualPropTypeCallCache[cacheKey] = true;
 	            manualPropTypeWarningCount++;
@@ -7509,7 +7564,7 @@
 	  }
 	
 	  function createAnyTypeChecker() {
-	    return createChainableTypeChecker(emptyFunction.thatReturnsNull);
+	    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
 	  }
 	
 	  function createArrayOfTypeChecker(typeChecker) {
@@ -7559,8 +7614,8 @@
 	
 	  function createEnumTypeChecker(expectedValues) {
 	    if (!Array.isArray(expectedValues)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
+	      process.env.NODE_ENV !== 'production' ? printWarning('Invalid argument supplied to oneOf, expected an instance of array.') : void 0;
+	      return emptyFunctionThatReturnsNull;
 	    }
 	
 	    function validate(props, propName, componentName, location, propFullName) {
@@ -7602,21 +7657,18 @@
 	
 	  function createUnionTypeChecker(arrayOfTypeCheckers) {
 	    if (!Array.isArray(arrayOfTypeCheckers)) {
-	      process.env.NODE_ENV !== 'production' ? warning(false, 'Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-	      return emptyFunction.thatReturnsNull;
+	      process.env.NODE_ENV !== 'production' ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
+	      return emptyFunctionThatReturnsNull;
 	    }
 	
 	    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
 	      var checker = arrayOfTypeCheckers[i];
 	      if (typeof checker !== 'function') {
-	        warning(
-	          false,
+	        printWarning(
 	          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-	          'received %s at index %s.',
-	          getPostfixForTypeWarning(checker),
-	          i
+	          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
 	        );
-	        return emptyFunction.thatReturnsNull;
+	        return emptyFunctionThatReturnsNull;
 	      }
 	    }
 	
@@ -7830,7 +7882,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports) {
 
 	/**
@@ -7987,7 +8039,7 @@
 	module.exports = CSSProperty;
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8109,7 +8161,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8124,7 +8176,7 @@
 	
 	var DOMProperty = __webpack_require__(14);
 	var ReactDOMComponentTree = __webpack_require__(6);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	
 	var quoteAttributeValueForBrowser = __webpack_require__(185);
 	var warning = __webpack_require__(3);
@@ -8347,7 +8399,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports) {
 
 	/**
@@ -8367,7 +8419,7 @@
 	module.exports = ReactDOMComponentFlags;
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8382,7 +8434,7 @@
 	
 	var _assign = __webpack_require__(5);
 	
-	var LinkedValueUtils = __webpack_require__(43);
+	var LinkedValueUtils = __webpack_require__(44);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactUpdates = __webpack_require__(11);
 	
@@ -8570,7 +8622,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports) {
 
 	/**
@@ -8602,7 +8654,7 @@
 	module.exports = ReactEmptyComponent;
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports) {
 
 	/**
@@ -8626,7 +8678,7 @@
 	module.exports = ReactFeatureFlags;
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8697,7 +8749,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8712,9 +8764,9 @@
 	
 	var ReactDOMSelection = __webpack_require__(140);
 	
-	var containsNode = __webpack_require__(99);
-	var focusNode = __webpack_require__(57);
-	var getActiveElement = __webpack_require__(58);
+	var containsNode = __webpack_require__(100);
+	var focusNode = __webpack_require__(58);
+	var getActiveElement = __webpack_require__(59);
 	
 	function isInDocument(node) {
 	  return containsNode(document.documentElement, node);
@@ -8822,7 +8874,7 @@
 	module.exports = ReactInputSelection;
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -8845,19 +8897,19 @@
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactDOMContainerInfo = __webpack_require__(132);
 	var ReactDOMFeatureFlags = __webpack_require__(134);
-	var ReactFeatureFlags = __webpack_require__(67);
+	var ReactFeatureFlags = __webpack_require__(68);
 	var ReactInstanceMap = __webpack_require__(23);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	var ReactMarkupChecksum = __webpack_require__(154);
 	var ReactReconciler = __webpack_require__(18);
-	var ReactUpdateQueue = __webpack_require__(46);
+	var ReactUpdateQueue = __webpack_require__(47);
 	var ReactUpdates = __webpack_require__(11);
 	
 	var emptyObject = __webpack_require__(25);
-	var instantiateReactComponent = __webpack_require__(79);
+	var instantiateReactComponent = __webpack_require__(80);
 	var invariant = __webpack_require__(2);
 	var setInnerHTML = __webpack_require__(32);
-	var shouldUpdateReactComponent = __webpack_require__(52);
+	var shouldUpdateReactComponent = __webpack_require__(53);
 	var warning = __webpack_require__(3);
 	
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -9363,7 +9415,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9406,7 +9458,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports) {
 
 	/**
@@ -9425,7 +9477,7 @@
 	module.exports = ReactPropTypesSecret;
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports) {
 
 	/**
@@ -9452,7 +9504,7 @@
 	module.exports = ViewportMetrics;
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9513,7 +9565,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports) {
 
 	/**
@@ -9546,7 +9598,7 @@
 	module.exports = forEachAccumulated;
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9559,7 +9611,7 @@
 	
 	'use strict';
 	
-	var ReactNodeTypes = __webpack_require__(71);
+	var ReactNodeTypes = __webpack_require__(72);
 	
 	function getHostComponentFromComposite(inst) {
 	  var type;
@@ -9578,7 +9630,7 @@
 	module.exports = getHostComponentFromComposite;
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9613,7 +9665,7 @@
 	module.exports = getTextContentAccessor;
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9738,7 +9790,7 @@
 	module.exports = inputValueTracking;
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9755,8 +9807,8 @@
 	    _assign = __webpack_require__(5);
 	
 	var ReactCompositeComponent = __webpack_require__(129);
-	var ReactEmptyComponent = __webpack_require__(66);
-	var ReactHostComponent = __webpack_require__(68);
+	var ReactEmptyComponent = __webpack_require__(67);
+	var ReactHostComponent = __webpack_require__(69);
 	
 	var getNextDebugID = __webpack_require__(197);
 	var invariant = __webpack_require__(2);
@@ -9870,7 +9922,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports) {
 
 	/**
@@ -9923,7 +9975,7 @@
 	module.exports = isTextInputElement;
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9977,7 +10029,7 @@
 	module.exports = setTextContent;
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -9997,7 +10049,7 @@
 	
 	var getIteratorFn = __webpack_require__(182);
 	var invariant = __webpack_require__(2);
-	var KeyEscapeUtils = __webpack_require__(42);
+	var KeyEscapeUtils = __webpack_require__(43);
 	var warning = __webpack_require__(3);
 	
 	var SEPARATOR = '.';
@@ -10156,7 +10208,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10172,12 +10224,12 @@
 	var _prodInvariant = __webpack_require__(20),
 	    _assign = __webpack_require__(5);
 	
-	var ReactNoopUpdateQueue = __webpack_require__(86);
+	var ReactNoopUpdateQueue = __webpack_require__(87);
 	
 	var canDefineProperty = __webpack_require__(33);
 	var emptyObject = __webpack_require__(25);
 	var invariant = __webpack_require__(2);
-	var lowPriorityWarning = __webpack_require__(54);
+	var lowPriorityWarning = __webpack_require__(55);
 	
 	/**
 	 * Base class helpers for the updating state of a component.
@@ -10302,7 +10354,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports) {
 
 	/**
@@ -10324,7 +10376,7 @@
 	module.exports = REACT_ELEMENT_TYPE;
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10351,9 +10403,9 @@
 	var checkReactTypeSpec = __webpack_require__(195);
 	
 	var canDefineProperty = __webpack_require__(33);
-	var getIteratorFn = __webpack_require__(87);
+	var getIteratorFn = __webpack_require__(88);
 	var warning = __webpack_require__(3);
-	var lowPriorityWarning = __webpack_require__(54);
+	var lowPriorityWarning = __webpack_require__(55);
 	
 	function getDeclarationErrorAddendum() {
 	  if (ReactCurrentOwner.current) {
@@ -10582,7 +10634,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10680,7 +10732,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	/**
@@ -10723,7 +10775,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10975,13 +11027,13 @@
 
 
 /***/ },
-/* 89 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -10991,6 +11043,10 @@
 	var _react = __webpack_require__(34);
 	
 	var _react2 = _interopRequireDefault(_react);
+	
+	var _propTypes = __webpack_require__(38);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
 	var _classnames = __webpack_require__(35);
 	
@@ -11009,48 +11065,36 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Icon = function (_Component) {
-	    _inherits(Icon, _Component);
+	  _inherits(Icon, _Component);
 	
-	    function Icon() {
-	        _classCallCheck(this, Icon);
+	  function Icon() {
+	    _classCallCheck(this, Icon);
 	
-	        return _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).apply(this, arguments));
+	  }
+	
+	  _createClass(Icon, [{
+	    key: 'render',
+	    value: function render() {
+	      // eslint-disable-next-line no-unused-vars
+	      var _props = this.props,
+	          children = _props.children,
+	          className = _props.className,
+	          props = _objectWithoutProperties(_props, ['children', 'className']);
+	
+	      return _react2.default.createElement('i', _extends({ className: (0, _classnames2.default)('nestable-icon', className) }, props));
 	    }
+	  }]);
 	
-	    _createClass(Icon, [{
-	        key: 'render',
-	        value: function render() {
-	            var _props = this.props,
-	                children = _props.children,
-	                className = _props.className,
-	                props = _objectWithoutProperties(_props, ['children', 'className']);
-	
-	            return _react2.default.createElement('i', _extends({ className: (0, _classnames2.default)("nestable-icon", className) }, props));
-	        }
-	    }]);
-	
-	    return Icon;
+	  return Icon;
 	}(_react.Component);
 	
+	Icon.propTypes = {
+	  children: _propTypes2.default.any,
+	  className: _propTypes2.default.string
+	};
+	
 	exports.default = Icon;
-
-/***/ },
-/* 90 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _Icon = __webpack_require__(89);
-	
-	var _Icon2 = _interopRequireDefault(_Icon);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _Icon2.default;
 
 /***/ },
 /* 91 */
@@ -11059,7 +11103,25 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
+	});
+	
+	var _Icon = __webpack_require__(90);
+	
+	var _Icon2 = _interopRequireDefault(_Icon);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _Icon2.default;
+
+/***/ },
+/* 92 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -11070,7 +11132,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _propTypes = __webpack_require__(113);
+	var _propTypes = __webpack_require__(38);
 	
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 	
@@ -11086,11 +11148,11 @@
 	
 	var _classnames2 = _interopRequireDefault(_classnames);
 	
-	var _utils = __webpack_require__(95);
+	var _utils = __webpack_require__(96);
 	
 	__webpack_require__(201);
 	
-	var _NestableItem = __webpack_require__(92);
+	var _NestableItem = __webpack_require__(93);
 	
 	var _NestableItem2 = _interopRequireDefault(_NestableItem);
 	
@@ -11107,764 +11169,661 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var Nestable = function (_Component) {
-	    _inherits(Nestable, _Component);
+	  _inherits(Nestable, _Component);
 	
-	    function Nestable(props) {
-	        _classCallCheck(this, Nestable);
+	  function Nestable(props) {
+	    _classCallCheck(this, Nestable);
 	
-	        var _this = _possibleConstructorReturn(this, (Nestable.__proto__ || Object.getPrototypeOf(Nestable)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (Nestable.__proto__ || Object.getPrototypeOf(Nestable)).call(this, props));
 	
-	        _this.collapse = function (itemIds) {
-	            var _this$props = _this.props,
-	                childrenProp = _this$props.childrenProp,
-	                collapsed = _this$props.collapsed;
-	            var items = _this.state.items;
-	
-	
-	            if (itemIds == 'NONE') {
-	                _this.setState({
-	                    collapsedGroups: collapsed ? (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp) : []
-	                });
-	            } else if (itemIds == 'ALL') {
-	                _this.setState({
-	                    collapsedGroups: collapsed ? [] : (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp)
-	                });
-	            } else if ((0, _utils.isArray)(itemIds)) {
-	                _this.setState({
-	                    collapsedGroups: (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp).filter(function (id) {
-	                        return itemIds.indexOf(id) > -1 ^ collapsed;
-	                    })
-	                });
-	            } else {}
-	        };
-	
-	        _this.startTrackMouse = function () {
-	            document.addEventListener('mousemove', _this.onMouseMove);
-	            document.addEventListener('mouseup', _this.onDragEnd);
-	            document.addEventListener('keydown', _this.onKeyDown);
-	        };
-	
-	        _this.stopTrackMouse = function () {
-	            document.removeEventListener('mousemove', _this.onMouseMove);
-	            document.removeEventListener('mouseup', _this.onDragEnd);
-	            document.removeEventListener('keydown', _this.onKeyDown);
-	            _this.elCopyStyles = null;
-	        };
-	
-	        _this.getItemDepth = function (item) {
-	            var childrenProp = _this.props.childrenProp;
-	
-	            var level = 1;
-	
-	            if (item[childrenProp].length > 0) {
-	                var childrenDepths = item[childrenProp].map(_this.getItemDepth);
-	                level += Math.max.apply(Math, _toConsumableArray(childrenDepths));
-	            }
-	
-	            return level;
-	        };
-	
-	        _this.isCollapsed = function (item) {
-	            var collapsed = _this.props.collapsed;
-	            var collapsedGroups = _this.state.collapsedGroups;
+	    _this.collapse = function (itemIds) {
+	      var _this$props = _this.props,
+	          childrenProp = _this$props.childrenProp,
+	          collapsed = _this$props.collapsed;
+	      var items = _this.state.items;
 	
 	
-	            return !!(collapsedGroups.indexOf(item.id) > -1 ^ collapsed);
-	        };
+	      if (itemIds === 'NONE') {
+	        _this.setState({
+	          collapsedGroups: collapsed ? (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp) : []
+	        });
+	      } else if (itemIds === 'ALL') {
+	        _this.setState({
+	          collapsedGroups: collapsed ? [] : (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp)
+	        });
+	      } else if ((0, _utils.isArray)(itemIds)) {
+	        _this.setState({
+	          collapsedGroups: (0, _utils.getAllNonEmptyNodesIds)(items, childrenProp).filter(function (id) {
+	            return itemIds.indexOf(id) > -1 ^ collapsed;
+	          })
+	        });
+	      }
+	    };
 	
-	        _this.onDragStart = function (e, item) {
-	            if (e) {
-	                e.preventDefault();
-	                e.stopPropagation();
-	            }
+	    _this.startTrackMouse = function () {
+	      document.addEventListener('mousemove', _this.onMouseMove);
+	      document.addEventListener('mouseup', _this.onDragEnd);
+	      document.addEventListener('keydown', _this.onKeyDown);
+	    };
 	
-	            _this.startTrackMouse();
-	            _this.onMouseMove(e);
+	    _this.stopTrackMouse = function () {
+	      document.removeEventListener('mousemove', _this.onMouseMove);
+	      document.removeEventListener('mouseup', _this.onDragEnd);
+	      document.removeEventListener('keydown', _this.onKeyDown);
+	      _this.elCopyStyles = null;
+	    };
 	
-	            _this.setState({
-	                dragItem: item,
-	                itemsOld: _this.state.items
-	            });
-	        };
+	    _this.getItemDepth = function (item) {
+	      var childrenProp = _this.props.childrenProp;
 	
-	        _this.onDragEnd = function (e, isCancel) {
-	            e && e.preventDefault();
+	      var level = 1;
 	
-	            _this.stopTrackMouse();
+	      if (item[childrenProp].length > 0) {
+	        var childrenDepths = item[childrenProp].map(_this.getItemDepth);
+	        level += Math.max.apply(Math, _toConsumableArray(childrenDepths));
+	      }
 	
-	            isCancel ? _this.dragRevert() : _this.dragApply();
-	        };
+	      return level;
+	    };
 	
-	        _this.onMouseMove = function (e) {
-	            var _this$props2 = _this.props,
-	                group = _this$props2.group,
-	                threshold = _this$props2.threshold;
-	            var dragItem = _this.state.dragItem;
-	            var target = e.target,
-	                clientX = e.clientX,
-	                clientY = e.clientY;
+	    _this.isCollapsed = function (item) {
+	      var collapsed = _this.props.collapsed;
+	      var collapsedGroups = _this.state.collapsedGroups;
 	
-	            var transformProps = (0, _utils.getTransformProps)(clientX, clientY);
-	            var el = (0, _utils.closest)(target, '.nestable-item');
-	            var elCopy = document.querySelector('.nestable-' + group + ' .nestable-drag-layer > .nestable-list');
 	
-	            if (!_this.elCopyStyles) {
-	                var offset = (0, _utils.getOffsetRect)(el);
-	                var scroll = {
-	                    top: document.body.scrollTop,
-	                    left: document.body.scrollLeft
-	                };
+	      return !!(collapsedGroups.indexOf(item.id) > -1 ^ collapsed);
+	    };
 	
-	                _this.elCopyStyles = _extends({
-	                    marginTop: offset.top - clientY - scroll.top,
-	                    marginLeft: offset.left - clientX - scroll.left
-	                }, transformProps);
-	            } else {
-	                _this.elCopyStyles = _extends({}, _this.elCopyStyles, transformProps);
-	                for (var key in transformProps) {
-	                    if (transformProps.hasOwnProperty(key)) {
-	                        elCopy.style[key] = transformProps[key];
-	                    }
-	                }
+	    _this.onDragStart = function (e, item) {
+	      if (e) {
+	        e.preventDefault();
+	        e.stopPropagation();
+	      }
 	
-	                var diffX = clientX - _this.mouse.last.x;
-	                if (diffX >= 0 && _this.mouse.shift.x >= 0 || diffX <= 0 && _this.mouse.shift.x <= 0) {
-	                    _this.mouse.shift.x += diffX;
-	                } else {
-	                    _this.mouse.shift.x = 0;
-	                }
-	                _this.mouse.last.x = clientX;
+	      _this.el = (0, _utils.closest)(e.target, '.nestable-item');
 	
-	                if (Math.abs(_this.mouse.shift.x) > threshold) {
-	                    if (_this.mouse.shift.x > 0) {
-	                        _this.tryIncreaseDepth(dragItem);
-	                    } else {
-	                        _this.tryDecreaseDepth(dragItem);
-	                    }
+	      _this.startTrackMouse();
+	      _this.onMouseMove(e);
 	
-	                    _this.mouse.shift.x = 0;
-	                }
-	            }
-	        };
+	      _this.setState({
+	        dragItem: item,
+	        itemsOld: _this.state.items
+	      });
+	    };
 	
-	        _this.onMouseEnter = function (e, item) {
-	            if (e) {
-	                e.preventDefault();
-	                e.stopPropagation();
-	            }
+	    _this.onDragEnd = function (e, isCancel) {
+	      e && e.preventDefault();
 	
-	            var _this$props3 = _this.props,
-	                collapsed = _this$props3.collapsed,
-	                childrenProp = _this$props3.childrenProp;
-	            var dragItem = _this.state.dragItem;
+	      _this.stopTrackMouse();
+	      _this.el = null;
 	
-	            if (dragItem.id === item.id) return;
+	      isCancel ? _this.dragRevert() : _this.dragApply();
+	    };
 	
-	            var pathFrom = _this.getPathById(dragItem.id);
-	            var pathTo = _this.getPathById(item.id);
+	    _this.onMouseMove = function (e) {
+	      var _this$props2 = _this.props,
+	          group = _this$props2.group,
+	          threshold = _this$props2.threshold;
+	      var dragItem = _this.state.dragItem;
+	      var clientX = e.clientX,
+	          clientY = e.clientY;
 	
-	            // if collapsed by default
-	            // and move last (by count) child
-	            // remove parent node from list of open nodes
-	            var collapseProps = {};
-	            if (collapsed && pathFrom.length > 1) {
-	                var parent = _this.getItemByPath(pathFrom.slice(0, -1));
-	                if (parent[childrenProp].length == 1) {
-	                    collapseProps = _this.onToggleCollapse(parent, true);
-	                }
-	            }
+	      var transformProps = (0, _utils.getTransformProps)(clientX, clientY);
+	      var elCopy = document.querySelector('.nestable-' + group + ' .nestable-drag-layer > .nestable-list');
 	
-	            _this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
-	        };
+	      if (!_this.elCopyStyles) {
+	        var offset = (0, _utils.getOffsetRect)(_this.el);
+	        var scroll = (0, _utils.getTotalScroll)(_this.el);
 	
-	        _this.onToggleCollapse = function (item, isGetter) {
-	            var collapsed = _this.props.collapsed;
-	            var collapsedGroups = _this.state.collapsedGroups;
+	        _this.elCopyStyles = _extends({
+	          marginTop: offset.top - clientY - scroll.top,
+	          marginLeft: offset.left - clientX - scroll.left
+	        }, transformProps);
+	      } else {
+	        _this.elCopyStyles = _extends({}, _this.elCopyStyles, transformProps);
+	        for (var key in transformProps) {
+	          if (transformProps.hasOwnProperty(key)) {
+	            elCopy.style[key] = transformProps[key];
+	          }
+	        }
 	
-	            var isCollapsed = _this.isCollapsed(item);
+	        var diffX = clientX - _this.mouse.last.x;
+	        if (diffX >= 0 && _this.mouse.shift.x >= 0 || diffX <= 0 && _this.mouse.shift.x <= 0) {
+	          _this.mouse.shift.x += diffX;
+	        } else {
+	          _this.mouse.shift.x = 0;
+	        }
+	        _this.mouse.last.x = clientX;
 	
-	            var newState = {
-	                collapsedGroups: isCollapsed ^ collapsed ? collapsedGroups.filter(function (id) {
-	                    return id != item.id;
-	                }) : collapsedGroups.concat(item.id)
-	            };
+	        if (Math.abs(_this.mouse.shift.x) > threshold) {
+	          if (_this.mouse.shift.x > 0) {
+	            _this.tryIncreaseDepth(dragItem);
+	          } else {
+	            _this.tryDecreaseDepth(dragItem);
+	          }
 	
-	            if (isGetter) {
-	                return newState;
-	            } else {
-	                _this.setState(newState);
-	            }
-	        };
+	          _this.mouse.shift.x = 0;
+	        }
+	      }
+	    };
 	
-	        _this.onKeyDown = function (e) {
-	            if (e.which === 27) {
-	                // ESC
-	                _this.onDragEnd(null, true);
-	            }
-	        };
+	    _this.onMouseEnter = function (e, item) {
+	      if (e) {
+	        e.preventDefault();
+	        e.stopPropagation();
+	      }
 	
-	        _this.state = {
-	            items: [],
-	            itemsOld: null, // snap copy in case of canceling drag
-	            dragItem: null,
-	            isDirty: false,
-	            collapsedGroups: []
-	        };
+	      var _this$props3 = _this.props,
+	          collapsed = _this$props3.collapsed,
+	          childrenProp = _this$props3.childrenProp;
+	      var dragItem = _this.state.dragItem;
 	
-	        _this.elCopyStyles = null;
-	        _this.mouse = {
-	            last: { x: 0 },
-	            shift: { x: 0 }
-	        };
-	        return _this;
+	      if (dragItem.id === item.id) return;
+	
+	      var pathFrom = _this.getPathById(dragItem.id);
+	      var pathTo = _this.getPathById(item.id);
+	
+	      // if collapsed by default
+	      // and move last (by count) child
+	      // remove parent node from list of open nodes
+	      var collapseProps = {};
+	      if (collapsed && pathFrom.length > 1) {
+	        var parent = _this.getItemByPath(pathFrom.slice(0, -1));
+	        if (parent[childrenProp].length === 1) {
+	          collapseProps = _this.onToggleCollapse(parent, true);
+	        }
+	      }
+	
+	      _this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
+	    };
+	
+	    _this.onToggleCollapse = function (item, isGetter) {
+	      var collapsed = _this.props.collapsed;
+	      var collapsedGroups = _this.state.collapsedGroups;
+	
+	      var isCollapsed = _this.isCollapsed(item);
+	
+	      var newState = {
+	        collapsedGroups: isCollapsed ^ collapsed ? collapsedGroups.filter(function (id) {
+	          return id !== item.id;
+	        }) : collapsedGroups.concat(item.id)
+	      };
+	
+	      if (isGetter) {
+	        return newState;
+	      } else {
+	        _this.setState(newState);
+	      }
+	    };
+	
+	    _this.onKeyDown = function (e) {
+	      if (e.which === 27) {
+	        // ESC
+	        _this.onDragEnd(null, true);
+	      }
+	    };
+	
+	    _this.state = {
+	      items: [],
+	      itemsOld: null, // snap copy in case of canceling drag
+	      dragItem: null,
+	      isDirty: false,
+	      collapsedGroups: []
+	    };
+	
+	    _this.el = null;
+	    _this.elCopyStyles = null;
+	    _this.mouse = {
+	      last: { x: 0 },
+	      shift: { x: 0 }
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(Nestable, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var _props = this.props,
+	          items = _props.items,
+	          childrenProp = _props.childrenProp;
+	
+	      // make sure every item has property 'children'
+	
+	      items = (0, _utils.listWithChildren)(items, childrenProp);
+	
+	      this.setState({ items: items });
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps) {
+	      var _props2 = this.props,
+	          itemsNew = _props2.items,
+	          childrenProp = _props2.childrenProp;
+	
+	      var isPropsUpdated = (0, _reactAddonsShallowCompare2.default)({ props: prevProps, state: {} }, this.props, {});
+	
+	      if (isPropsUpdated) {
+	        this.stopTrackMouse();
+	
+	        var extra = {};
+	
+	        if (prevProps.collapsed !== this.props.collapsed) {
+	          extra.collapsedGroups = [];
+	        }
+	
+	        this.setState(_extends({
+	          items: (0, _utils.listWithChildren)(itemsNew, childrenProp),
+	          dragItem: null,
+	          isDirty: false
+	        }, extra));
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.stopTrackMouse();
 	    }
 	
-	    _createClass(Nestable, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            var _props = this.props,
-	                items = _props.items,
-	                childrenProp = _props.childrenProp;
+	    // ––––––––––––––––––––––––––––––––––––
+	    // Public Methods
+	    // ––––––––––––––––––––––––––––––––––––
 	
-	            // make sure every item has property 'children'
 	
-	            items = (0, _utils.listWithChildren)(items, childrenProp);
+	    // ––––––––––––––––––––––––––––––––––––
+	    // Methods
+	    // ––––––––––––––––––––––––––––––––––––
 	
-	            this.setState({ items: items });
+	  }, {
+	    key: 'moveItem',
+	    value: function moveItem(_ref) {
+	      var dragItem = _ref.dragItem,
+	          pathFrom = _ref.pathFrom,
+	          pathTo = _ref.pathTo;
+	      var extraProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	      var _props3 = this.props,
+	          childrenProp = _props3.childrenProp,
+	          confirmChange = _props3.confirmChange;
+	
+	      var dragItemSize = this.getItemDepth(dragItem);
+	      var items = this.state.items;
+	
+	      // the remove action might affect the next position,
+	      // so update next coordinates accordingly
+	
+	      var realPathTo = this.getRealNextPath(pathFrom, pathTo, dragItemSize);
+	
+	      if (realPathTo.length === 0) return;
+	
+	      // user can validate every movement
+	      var destinationPath = realPathTo.length > pathTo.length ? pathTo : pathTo.slice(0, -1);
+	      var destinationParent = this.getItemByPath(destinationPath);
+	      if (!confirmChange(dragItem, destinationParent)) return;
+	
+	      var removePath = this.getSplicePath(pathFrom, {
+	        numToRemove: 1,
+	        childrenProp: childrenProp
+	      });
+	
+	      var insertPath = this.getSplicePath(realPathTo, {
+	        numToRemove: 0,
+	        itemsToInsert: [dragItem],
+	        childrenProp: childrenProp
+	      });
+	
+	      items = (0, _reactAddonsUpdate2.default)(items, removePath);
+	      items = (0, _reactAddonsUpdate2.default)(items, insertPath);
+	
+	      this.setState(_extends({
+	        items: items,
+	        isDirty: true
+	      }, extraProps));
+	    }
+	  }, {
+	    key: 'tryIncreaseDepth',
+	    value: function tryIncreaseDepth(dragItem) {
+	      var _props4 = this.props,
+	          maxDepth = _props4.maxDepth,
+	          childrenProp = _props4.childrenProp,
+	          collapsed = _props4.collapsed;
+	
+	      var pathFrom = this.getPathById(dragItem.id);
+	      var itemIndex = pathFrom[pathFrom.length - 1];
+	      var newDepth = pathFrom.length + this.getItemDepth(dragItem);
+	
+	      // has previous sibling and isn't at max depth
+	      if (itemIndex > 0 && newDepth <= maxDepth) {
+	        var prevSibling = this.getItemByPath(pathFrom.slice(0, -1).concat(itemIndex - 1));
+	
+	        // previous sibling is not collapsed
+	        if (!prevSibling[childrenProp].length || !this.isCollapsed(prevSibling)) {
+	          var pathTo = pathFrom.slice(0, -1).concat(itemIndex - 1).concat(prevSibling[childrenProp].length);
+	
+	          // if collapsed by default
+	          // and was no children here
+	          // open this node
+	          var collapseProps = {};
+	          if (collapsed && !prevSibling[childrenProp].length) {
+	            collapseProps = this.onToggleCollapse(prevSibling, true);
+	          }
+	
+	          this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
 	        }
-	    }, {
-	        key: 'componentWillReceiveProps',
-	        value: function componentWillReceiveProps(nextProps) {
-	            var itemsNew = nextProps.items,
-	                childrenProp = nextProps.childrenProp;
+	      }
+	    }
+	  }, {
+	    key: 'tryDecreaseDepth',
+	    value: function tryDecreaseDepth(dragItem) {
+	      var _props5 = this.props,
+	          childrenProp = _props5.childrenProp,
+	          collapsed = _props5.collapsed;
 	
-	            var isPropsUpdated = (0, _reactAddonsShallowCompare2.default)({ props: this.props, state: {} }, nextProps, {});
+	      var pathFrom = this.getPathById(dragItem.id);
+	      var itemIndex = pathFrom[pathFrom.length - 1];
 	
-	            if (isPropsUpdated) {
-	                this.stopTrackMouse();
+	      // has parent
+	      if (pathFrom.length > 1) {
+	        var parent = this.getItemByPath(pathFrom.slice(0, -1));
 	
-	                var extra = {};
+	        // is last (by order) item in array
+	        if (itemIndex + 1 === parent[childrenProp].length) {
+	          var pathTo = pathFrom.slice(0, -1);
+	          pathTo[pathTo.length - 1] += 1;
 	
-	                if (this.props.collapsed !== nextProps.collapsed) {
-	                    extra.collapsedGroups = [];
-	                }
+	          // if collapsed by default
+	          // and is last (by count) item in array
+	          // remove this node from list of open nodes
+	          var collapseProps = {};
+	          if (collapsed && parent[childrenProp].length === 1) {
+	            collapseProps = this.onToggleCollapse(parent, true);
+	          }
 	
-	                this.setState(_extends({
-	                    items: (0, _utils.listWithChildren)(itemsNew, childrenProp),
-	                    dragItem: null,
-	                    isDirty: false
-	                }, extra));
-	            }
+	          this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
 	        }
-	    }, {
-	        key: 'componentWillUnmount',
-	        value: function componentWillUnmount() {
-	            this.stopTrackMouse();
+	      }
+	    }
+	  }, {
+	    key: 'dragApply',
+	    value: function dragApply() {
+	      var onChange = this.props.onChange;
+	      var _state = this.state,
+	          items = _state.items,
+	          isDirty = _state.isDirty,
+	          dragItem = _state.dragItem;
+	
+	
+	      this.setState({
+	        itemsOld: null,
+	        dragItem: null,
+	        isDirty: false
+	      });
+	
+	      onChange && isDirty && onChange(items, dragItem);
+	    }
+	  }, {
+	    key: 'dragRevert',
+	    value: function dragRevert() {
+	      var itemsOld = this.state.itemsOld;
+	
+	
+	      this.setState({
+	        items: itemsOld,
+	        itemsOld: null,
+	        dragItem: null,
+	        isDirty: false
+	      });
+	    }
+	
+	    // ––––––––––––––––––––––––––––––––––––
+	    // Getter methods
+	    // ––––––––––––––––––––––––––––––––––––
+	
+	  }, {
+	    key: 'getPathById',
+	    value: function getPathById(id) {
+	      var _this2 = this;
+	
+	      var items = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.state.items;
+	      var childrenProp = this.props.childrenProp;
+	
+	      var path = [];
+	
+	      items.every(function (item, i) {
+	        if (item.id === id) {
+	          path.push(i);
+	        } else if (item[childrenProp]) {
+	          var childrenPath = _this2.getPathById(id, item[childrenProp]);
+	
+	          if (childrenPath.length) {
+	            path = path.concat(i).concat(childrenPath);
+	          }
 	        }
 	
-	        // ––––––––––––––––––––––––––––––––––––
-	        // Public Methods
-	        // ––––––––––––––––––––––––––––––––––––
+	        return path.length === 0;
+	      });
+	
+	      return path;
+	    }
+	  }, {
+	    key: 'getItemByPath',
+	    value: function getItemByPath(path) {
+	      var items = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.state.items;
+	      var childrenProp = this.props.childrenProp;
+	
+	      var item = null;
+	
+	      path.forEach(function (index) {
+	        var list = item ? item[childrenProp] : items;
+	        item = list[index];
+	      });
+	
+	      return item;
+	    }
+	  }, {
+	    key: 'getSplicePath',
+	    value: function getSplicePath(path) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	
+	      var splicePath = {};
+	      var numToRemove = options.numToRemove || 0;
+	      var itemsToInsert = options.itemsToInsert || [];
+	      var lastIndex = path.length - 1;
+	      var currentPath = splicePath;
+	
+	      path.forEach(function (index, i) {
+	        if (i === lastIndex) {
+	          currentPath.$splice = [[index, numToRemove].concat(_toConsumableArray(itemsToInsert))];
+	        } else {
+	          var nextPath = {};
+	          currentPath[index] = _defineProperty({}, options.childrenProp, nextPath);
+	          currentPath = nextPath;
+	        }
+	      });
+	
+	      return splicePath;
+	    }
+	  }, {
+	    key: 'getRealNextPath',
+	    value: function getRealNextPath(prevPath, nextPath, dragItemSize) {
+	      var _props6 = this.props,
+	          childrenProp = _props6.childrenProp,
+	          maxDepth = _props6.maxDepth;
+	
+	      var ppLastIndex = prevPath.length - 1;
+	      var npLastIndex = nextPath.length - 1;
+	      var newDepth = nextPath.length + dragItemSize - 1;
+	
+	      if (prevPath.length < nextPath.length) {
+	        // move into depth
+	        var wasShifted = false;
+	
+	        // if new depth exceeds max, try to put after item instead of into item
+	        if (newDepth > maxDepth && nextPath.length) {
+	          return this.getRealNextPath(prevPath, nextPath.slice(0, -1), dragItemSize);
+	        }
+	
+	        return nextPath.map(function (nextIndex, i) {
+	          if (wasShifted) {
+	            return i === npLastIndex ? nextIndex + 1 : nextIndex;
+	          }
+	
+	          if (typeof prevPath[i] !== 'number') {
+	            return nextIndex;
+	          }
+	
+	          if (nextPath[i] > prevPath[i] && i === ppLastIndex) {
+	            wasShifted = true;
+	            return nextIndex - 1;
+	          }
+	
+	          return nextIndex;
+	        });
+	      } else if (prevPath.length === nextPath.length) {
+	        // if move bottom + move to item with children --> make it a first child instead of swap
+	        if (nextPath[npLastIndex] > prevPath[npLastIndex]) {
+	          var target = this.getItemByPath(nextPath);
+	
+	          if (newDepth < maxDepth && target[childrenProp] && target[childrenProp].length && !this.isCollapsed(target)) {
+	            return nextPath.slice(0, -1).concat(nextPath[npLastIndex] - 1).concat(0);
+	          }
+	        }
+	      }
+	
+	      return nextPath;
+	    }
+	  }, {
+	    key: 'getItemOptions',
+	    value: function getItemOptions() {
+	      var _props7 = this.props,
+	          renderItem = _props7.renderItem,
+	          renderCollapseIcon = _props7.renderCollapseIcon,
+	          handler = _props7.handler,
+	          childrenProp = _props7.childrenProp;
+	      var dragItem = this.state.dragItem;
 	
 	
-	        // ––––––––––––––––––––––––––––––––––––
-	        // Methods
-	        // ––––––––––––––––––––––––––––––––––––
+	      return {
+	        dragItem: dragItem,
+	        childrenProp: childrenProp,
+	        renderItem: renderItem,
+	        renderCollapseIcon: renderCollapseIcon,
+	        handler: handler,
 	
-	    }, {
-	        key: 'moveItem',
-	        value: function moveItem(_ref) {
-	            var dragItem = _ref.dragItem,
-	                pathFrom = _ref.pathFrom,
-	                pathTo = _ref.pathTo;
-	            var extraProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	            var childrenProp = this.props.childrenProp;
-	            var items = this.state.items;
+	        onDragStart: this.onDragStart,
+	        onMouseEnter: this.onMouseEnter,
+	        isCollapsed: this.isCollapsed,
+	        onToggleCollapse: this.onToggleCollapse
+	      };
+	    }
 	
-	            // the remove action might affect the next position,
-	            // so update next coordinates accordingly
+	    // ––––––––––––––––––––––––––––––––––––
+	    // Click handlers or event handlers
+	    // ––––––––––––––––––––––––––––––––––––
 	
-	            var realPathTo = this.getRealNextPath(pathFrom, pathTo);
+	  }, {
+	    key: 'renderDragLayer',
 	
-	            var removePath = this.getSplicePath(pathFrom, {
-	                numToRemove: 1,
-	                childrenProp: childrenProp
+	
+	    // ––––––––––––––––––––––––––––––––––––
+	    // Render methods
+	    // ––––––––––––––––––––––––––––––––––––
+	    value: function renderDragLayer() {
+	      var group = this.props.group;
+	      var dragItem = this.state.dragItem;
+	
+	      var el = document.querySelector('.nestable-' + group + ' .nestable-item-' + dragItem.id);
+	
+	      var listStyles = {};
+	      if (el) {
+	        listStyles.width = el.clientWidth;
+	      }
+	      if (this.elCopyStyles) {
+	        listStyles = _extends({}, listStyles, this.elCopyStyles);
+	      }
+	
+	      var options = this.getItemOptions();
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'nestable-drag-layer' },
+	        _react2.default.createElement(
+	          'ol',
+	          { className: 'nestable-list', style: listStyles },
+	          _react2.default.createElement(_NestableItem2.default, {
+	            item: dragItem,
+	            options: options,
+	            isCopy: true
+	          })
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _props8 = this.props,
+	          group = _props8.group,
+	          className = _props8.className;
+	      var _state2 = this.state,
+	          items = _state2.items,
+	          dragItem = _state2.dragItem;
+	
+	      var options = this.getItemOptions();
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: (0, _classnames2.default)(className, 'nestable', 'nestable-' + group, { 'is-drag-active': dragItem }) },
+	        _react2.default.createElement(
+	          'ol',
+	          { className: 'nestable-list nestable-group' },
+	          items.map(function (item, i) {
+	            return _react2.default.createElement(_NestableItem2.default, {
+	              key: i,
+	              index: i,
+	              item: item,
+	              options: options
 	            });
+	          })
+	        ),
+	        dragItem && this.renderDragLayer()
+	      );
+	    }
+	  }]);
 	
-	            var insertPath = this.getSplicePath(realPathTo, {
-	                numToRemove: 0,
-	                itemsToInsert: [dragItem],
-	                childrenProp: childrenProp
-	            });
-	
-	            items = (0, _reactAddonsUpdate2.default)(items, removePath);
-	            items = (0, _reactAddonsUpdate2.default)(items, insertPath);
-	
-	            this.setState(_extends({
-	                items: items,
-	                isDirty: true
-	            }, extraProps));
-	        }
-	    }, {
-	        key: 'tryIncreaseDepth',
-	        value: function tryIncreaseDepth(dragItem) {
-	            var _props2 = this.props,
-	                maxDepth = _props2.maxDepth,
-	                childrenProp = _props2.childrenProp,
-	                collapsed = _props2.collapsed;
-	
-	            var pathFrom = this.getPathById(dragItem.id);
-	            var itemIndex = pathFrom[pathFrom.length - 1];
-	            var newDepth = pathFrom.length + this.getItemDepth(dragItem);
-	
-	            // has previous sibling and isn't at max depth
-	            console.log({ itemIndex: itemIndex, pathFrom: pathFrom, newDepth: newDepth });
-	            if (itemIndex > 0 && newDepth <= maxDepth) {
-	                var prevSibling = this.getItemByPath(pathFrom.slice(0, -1).concat(itemIndex - 1));
-	
-	                // previous sibling is not collapsed
-	                if (!prevSibling[childrenProp].length || !this.isCollapsed(prevSibling)) {
-	                    var pathTo = pathFrom.slice(0, -1).concat(itemIndex - 1).concat(prevSibling[childrenProp].length);
-	
-	                    // if collapsed by default
-	                    // and was no children here
-	                    // open this node
-	                    var collapseProps = {};
-	                    if (collapsed && !prevSibling[childrenProp].length) {
-	                        collapseProps = this.onToggleCollapse(prevSibling, true);
-	                    }
-	
-	                    this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
-	                }
-	            }
-	        }
-	    }, {
-	        key: 'tryDecreaseDepth',
-	        value: function tryDecreaseDepth(dragItem) {
-	            var _props3 = this.props,
-	                childrenProp = _props3.childrenProp,
-	                collapsed = _props3.collapsed;
-	
-	            var pathFrom = this.getPathById(dragItem.id);
-	            var itemIndex = pathFrom[pathFrom.length - 1];
-	
-	            // has parent
-	            if (pathFrom.length > 1) {
-	                var parent = this.getItemByPath(pathFrom.slice(0, -1));
-	
-	                // is last (by order) item in array
-	                if (itemIndex + 1 == parent[childrenProp].length) {
-	                    var pathTo = pathFrom.slice(0, -1);
-	                    pathTo[pathTo.length - 1] += 1;
-	
-	                    // if collapsed by default
-	                    // and is last (by count) item in array
-	                    // remove this node from list of open nodes
-	                    var collapseProps = {};
-	                    if (collapsed && parent[childrenProp].length == 1) {
-	                        collapseProps = this.onToggleCollapse(parent, true);
-	                    }
-	
-	                    this.moveItem({ dragItem: dragItem, pathFrom: pathFrom, pathTo: pathTo }, collapseProps);
-	                }
-	            }
-	        }
-	    }, {
-	        key: 'dragApply',
-	        value: function dragApply() {
-	            var onChange = this.props.onChange;
-	            var _state = this.state,
-	                items = _state.items,
-	                isDirty = _state.isDirty,
-	                dragItem = _state.dragItem;
-	
-	
-	            this.setState({
-	                itemsOld: null,
-	                dragItem: null,
-	                isDirty: false
-	            });
-	
-	            onChange && isDirty && onChange(items, dragItem);
-	        }
-	    }, {
-	        key: 'dragRevert',
-	        value: function dragRevert() {
-	            var itemsOld = this.state.itemsOld;
-	
-	
-	            this.setState({
-	                items: itemsOld,
-	                itemsOld: null,
-	                dragItem: null,
-	                isDirty: false
-	            });
-	        }
-	
-	        // ––––––––––––––––––––––––––––––––––––
-	        // Getter methods
-	        // ––––––––––––––––––––––––––––––––––––
-	
-	    }, {
-	        key: 'getPathById',
-	        value: function getPathById(id) {
-	            var _this2 = this;
-	
-	            var items = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.state.items;
-	            var childrenProp = this.props.childrenProp;
-	
-	            var path = [];
-	
-	            items.every(function (item, i) {
-	                if (item.id === id) {
-	                    path.push(i);
-	                } else if (item[childrenProp]) {
-	                    var childrenPath = _this2.getPathById(id, item[childrenProp]);
-	
-	                    if (childrenPath.length) {
-	                        path = path.concat(i).concat(childrenPath);
-	                    }
-	                }
-	
-	                return path.length == 0;
-	            });
-	
-	            return path;
-	        }
-	    }, {
-	        key: 'getItemByPath',
-	        value: function getItemByPath(path) {
-	            var items = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.state.items;
-	            var childrenProp = this.props.childrenProp;
-	
-	            var item = null;
-	
-	            path.forEach(function (index, i) {
-	                var list = item ? item[childrenProp] : items;
-	                item = list[index];
-	            });
-	
-	            return item;
-	        }
-	    }, {
-	        key: 'getSplicePath',
-	        value: function getSplicePath(path) {
-	            var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	
-	            var splicePath = {};
-	            var numToRemove = options.numToRemove || 0;
-	            var itemsToInsert = options.itemsToInsert || [];
-	            var lastIndex = path.length - 1;
-	            var currentPath = splicePath;
-	
-	            path.forEach(function (index, i) {
-	                if (i === lastIndex) {
-	                    currentPath.$splice = [[index, numToRemove].concat(_toConsumableArray(itemsToInsert))];
-	                } else {
-	                    var nextPath = {};
-	                    currentPath[index] = _defineProperty({}, options.childrenProp, nextPath);
-	                    currentPath = nextPath;
-	                }
-	            });
-	
-	            return splicePath;
-	        }
-	    }, {
-	        key: 'getRealNextPath',
-	        value: function getRealNextPath(prevPath, nextPath) {
-	            var childrenProp = this.props.childrenProp;
-	
-	            var ppLastIndex = prevPath.length - 1;
-	            var npLastIndex = nextPath.length - 1;
-	
-	            if (prevPath.length < nextPath.length) {
-	                // move into deep
-	                var wasShifted = false;
-	
-	                return nextPath.map(function (nextIndex, i) {
-	                    if (wasShifted) {
-	                        return i == npLastIndex ? nextIndex + 1 : nextIndex;
-	                    }
-	
-	                    if (typeof prevPath[i] !== 'number') {
-	                        return nextIndex;
-	                    }
-	
-	                    if (nextPath[i] > prevPath[i] && i == ppLastIndex) {
-	                        wasShifted = true;
-	                        return nextIndex - 1;
-	                    }
-	
-	                    return nextIndex;
-	                });
-	            } else if (prevPath.length == nextPath.length) {
-	                // if move bottom + move to item with children => make it a first child instead of swap
-	                if (nextPath[npLastIndex] > prevPath[npLastIndex]) {
-	                    var target = this.getItemByPath(nextPath);
-	
-	                    if (target[childrenProp] && target[childrenProp].length && !this.isCollapsed(target)) {
-	                        return nextPath.slice(0, -1).concat(nextPath[npLastIndex] - 1).concat(0);
-	                    }
-	                }
-	            }
-	
-	            return nextPath;
-	        }
-	    }, {
-	        key: 'getItemOptions',
-	        value: function getItemOptions() {
-	            var _props4 = this.props,
-	                renderItem = _props4.renderItem,
-	                handler = _props4.handler,
-	                childrenProp = _props4.childrenProp;
-	            var dragItem = this.state.dragItem;
-	
-	
-	            return {
-	                dragItem: dragItem,
-	                childrenProp: childrenProp,
-	                renderItem: renderItem,
-	                handler: handler,
-	
-	                onDragStart: this.onDragStart,
-	                onMouseEnter: this.onMouseEnter,
-	                isCollapsed: this.isCollapsed,
-	                onToggleCollapse: this.onToggleCollapse
-	            };
-	        }
-	
-	        // ––––––––––––––––––––––––––––––––––––
-	        // Click handlers or event handlers
-	        // ––––––––––––––––––––––––––––––––––––
-	
-	    }, {
-	        key: 'renderDragLayer',
-	
-	
-	        // ––––––––––––––––––––––––––––––––––––
-	        // Render methods
-	        // ––––––––––––––––––––––––––––––––––––
-	        value: function renderDragLayer() {
-	            var group = this.props.group;
-	            var dragItem = this.state.dragItem;
-	
-	            var el = document.querySelector('.nestable-' + group + ' .nestable-item-' + dragItem.id);
-	
-	            var listStyles = {};
-	            if (el) {
-	                listStyles.width = el.clientWidth;
-	            }
-	            if (this.elCopyStyles) {
-	                listStyles = _extends({}, listStyles, this.elCopyStyles);
-	            }
-	
-	            var options = this.getItemOptions();
-	
-	            return _react2.default.createElement(
-	                'div',
-	                { className: 'nestable-drag-layer' },
-	                _react2.default.createElement(
-	                    'ol',
-	                    { className: 'nestable-list', style: listStyles },
-	                    _react2.default.createElement(_NestableItem2.default, {
-	                        item: dragItem,
-	                        options: options,
-	                        isCopy: true
-	                    })
-	                )
-	            );
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            var _state2 = this.state,
-	                items = _state2.items,
-	                dragItem = _state2.dragItem;
-	            var group = this.props.group;
-	
-	            var options = this.getItemOptions();
-	
-	            return _react2.default.createElement(
-	                'div',
-	                { className: (0, _classnames2.default)("nestable", "nestable-" + group, { 'is-drag-active': dragItem }) },
-	                _react2.default.createElement(
-	                    'ol',
-	                    { className: 'nestable-list nestable-group' },
-	                    items.map(function (item, i) {
-	                        return _react2.default.createElement(_NestableItem2.default, {
-	                            key: i,
-	                            item: item,
-	                            options: options
-	                        });
-	                    })
-	                ),
-	                dragItem && this.renderDragLayer()
-	            );
-	        }
-	    }]);
-	
-	    return Nestable;
+	  return Nestable;
 	}(_react.Component);
 	
 	Nestable.propTypes = {
-	    items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
-	        id: _propTypes2.default.any.isRequired
-	    })),
-	    threshold: _propTypes2.default.number,
-	    maxDepth: _propTypes2.default.number,
-	    collapsed: _propTypes2.default.bool,
-	    childrenProp: _propTypes2.default.string,
-	    renderItem: _propTypes2.default.func,
-	    onChange: _propTypes2.default.func
+	  className: _propTypes2.default.string,
+	  items: _propTypes2.default.arrayOf(_propTypes2.default.shape({
+	    id: _propTypes2.default.any.isRequired
+	  })),
+	  threshold: _propTypes2.default.number,
+	  maxDepth: _propTypes2.default.number,
+	  collapsed: _propTypes2.default.bool,
+	  group: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+	  childrenProp: _propTypes2.default.string,
+	  renderItem: _propTypes2.default.func,
+	  renderCollapseIcon: _propTypes2.default.func,
+	  handler: _propTypes2.default.node,
+	  onChange: _propTypes2.default.func,
+	  confirmChange: _propTypes2.default.func
 	};
 	Nestable.defaultProps = {
-	    items: [],
-	    threshold: 30,
-	    maxDepth: 10,
-	    collapsed: false,
-	    group: 0,
-	    childrenProp: 'children',
-	    renderItem: function renderItem(_ref2) {
-	        var item = _ref2.item;
-	        return item.toString();
-	    },
-	    onChange: function onChange() {}
+	  items: [],
+	  threshold: 30,
+	  maxDepth: 10,
+	  collapsed: false,
+	  group: Math.random().toString(36).slice(2),
+	  childrenProp: 'children',
+	  renderItem: function renderItem(_ref2) {
+	    var item = _ref2.item;
+	    return item.toString();
+	  },
+	  onChange: function onChange() {},
+	  confirmChange: function confirmChange() {
+	    return true;
+	  }
 	};
 	exports.default = Nestable;
-
-/***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(34);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _classnames = __webpack_require__(35);
-	
-	var _classnames2 = _interopRequireDefault(_classnames);
-	
-	var _Icon = __webpack_require__(90);
-	
-	var _Icon2 = _interopRequireDefault(_Icon);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var NestableItem = function (_Component) {
-	    _inherits(NestableItem, _Component);
-	
-	    function NestableItem() {
-	        _classCallCheck(this, NestableItem);
-	
-	        return _possibleConstructorReturn(this, (NestableItem.__proto__ || Object.getPrototypeOf(NestableItem)).apply(this, arguments));
-	    }
-	
-	    _createClass(NestableItem, [{
-	        key: 'render',
-	        value: function render() {
-	            var _props = this.props,
-	                item = _props.item,
-	                isCopy = _props.isCopy,
-	                options = _props.options;
-	            var dragItem = options.dragItem,
-	                renderItem = options.renderItem,
-	                handler = options.handler,
-	                childrenProp = options.childrenProp;
-	
-	            var isCollapsed = options.isCollapsed(item);
-	
-	            var isDragging = !isCopy && dragItem && dragItem.id === item.id;
-	            var hasChildren = item[childrenProp] && item[childrenProp].length > 0;
-	
-	            var Handler = void 0;
-	
-	            var itemProps = {
-	                className: (0, _classnames2.default)("nestable-item" + (isCopy ? '-copy' : ''), "nestable-item" + (isCopy ? '-copy' : '') + '-' + item.id, {
-	                    'is-dragging': isDragging
-	                })
-	            };
-	
-	            var rowProps = {};
-	            var handlerProps = {};
-	            if (!isCopy) {
-	                if (dragItem) {
-	                    rowProps = _extends({}, rowProps, {
-	                        onMouseEnter: function onMouseEnter(e) {
-	                            return options.onMouseEnter(e, item);
-	                        }
-	                    });
-	                } else {
-	                    handlerProps = _extends({}, handlerProps, {
-	                        draggable: true,
-	                        onDragStart: function onDragStart(e) {
-	                            return options.onDragStart(e, item);
-	                        }
-	                    });
-	                }
-	            }
-	
-	            if (handler) {
-	                Handler = _react2.default.createElement(
-	                    'span',
-	                    _extends({ className: 'nestable-item-handler' }, handlerProps),
-	                    handler
-	                );
-	                //Handler = React.cloneElement(handler, handlerProps);
-	            } else {
-	                rowProps = _extends({}, rowProps, handlerProps);
-	            }
-	
-	            var collapseIcon = hasChildren ? _react2.default.createElement(_Icon2.default, {
-	                className: (0, _classnames2.default)("nestable-item-icon", isCollapsed ? "icon-plus-gray" : "icon-minus-gray"),
-	                onClick: function onClick(e) {
-	                    return options.onToggleCollapse(item);
-	                }
-	            }) : '';
-	
-	            return _react2.default.createElement(
-	                'li',
-	                itemProps,
-	                _react2.default.createElement(
-	                    'div',
-	                    _extends({ className: 'nestable-item-name' }, rowProps),
-	                    renderItem({ item: item, collapseIcon: collapseIcon, handler: Handler })
-	                ),
-	                hasChildren && !isCollapsed && _react2.default.createElement(
-	                    'ol',
-	                    { className: 'nestable-list' },
-	                    item[childrenProp].map(function (item, i) {
-	                        return _react2.default.createElement(NestableItem, {
-	                            key: i,
-	                            item: item,
-	                            options: options,
-	                            isCopy: isCopy
-	                        });
-	                    })
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return NestableItem;
-	}(_react.Component);
-	
-	exports.default = NestableItem;
 
 /***/ },
 /* 93 */
@@ -11876,16 +11835,192 @@
 	  value: true
 	});
 	
-	var _Nestable = __webpack_require__(91);
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 	
-	var _Nestable2 = _interopRequireDefault(_Nestable);
-
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(34);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _propTypes = __webpack_require__(38);
+	
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+	
+	var _classnames = __webpack_require__(35);
+	
+	var _classnames2 = _interopRequireDefault(_classnames);
+	
+	var _Icon = __webpack_require__(91);
+	
+	var _Icon2 = _interopRequireDefault(_Icon);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _Nestable2.default;
+	
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var NestableItem = function (_Component) {
+	  _inherits(NestableItem, _Component);
+	
+	  function NestableItem() {
+	    var _ref;
+	
+	    var _temp, _this, _ret;
+	
+	    _classCallCheck(this, NestableItem);
+	
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
+	    }
+	
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NestableItem.__proto__ || Object.getPrototypeOf(NestableItem)).call.apply(_ref, [this].concat(args))), _this), _this.renderCollapseIcon = function (_ref2) {
+	      var isCollapsed = _ref2.isCollapsed;
+	      return _react2.default.createElement(_Icon2.default, {
+	        className: (0, _classnames2.default)('nestable-item-icon', {
+	          'icon-plus-gray': isCollapsed,
+	          'icon-minus-gray': !isCollapsed
+	        })
+	      });
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+	
+	  _createClass(NestableItem, [{
+	    key: 'render',
+	    value: function render() {
+	      var _cn;
+	
+	      var _props = this.props,
+	          item = _props.item,
+	          isCopy = _props.isCopy,
+	          options = _props.options,
+	          index = _props.index;
+	      var dragItem = options.dragItem,
+	          renderItem = options.renderItem,
+	          handler = options.handler,
+	          childrenProp = options.childrenProp,
+	          _options$renderCollap = options.renderCollapseIcon,
+	          renderCollapseIcon = _options$renderCollap === undefined ? this.renderCollapseIcon : _options$renderCollap;
+	
+	
+	      var isCollapsed = options.isCollapsed(item);
+	      var isDragging = !isCopy && dragItem && dragItem.id === item.id;
+	      var hasChildren = item[childrenProp] && item[childrenProp].length > 0;
+	
+	      var rowProps = {};
+	      var handlerProps = {};
+	      var Handler = void 0;
+	
+	      if (!isCopy) {
+	        if (dragItem) {
+	          rowProps = _extends({}, rowProps, {
+	            onMouseEnter: function onMouseEnter(e) {
+	              return options.onMouseEnter(e, item);
+	            }
+	          });
+	        } else {
+	          handlerProps = _extends({}, handlerProps, {
+	            draggable: true,
+	            onDragStart: function onDragStart(e) {
+	              return options.onDragStart(e, item);
+	            }
+	          });
+	        }
+	      }
+	
+	      if (handler) {
+	        Handler = _react2.default.createElement(
+	          'span',
+	          _extends({ className: 'nestable-item-handler' }, handlerProps),
+	          handler
+	        );
+	        //Handler = React.cloneElement(handler, handlerProps);
+	      } else {
+	        rowProps = _extends({}, rowProps, handlerProps);
+	      }
+	
+	      var collapseIcon = hasChildren ? _react2.default.createElement(
+	        'span',
+	        { onClick: function onClick() {
+	            return options.onToggleCollapse(item);
+	          } },
+	        renderCollapseIcon({ isCollapsed: isCollapsed })
+	      ) : null;
+	
+	      var baseClassName = 'nestable-item' + (isCopy ? '-copy' : '');
+	      var itemProps = {
+	        className: (0, _classnames2.default)(baseClassName, baseClassName + '-' + item.id, (_cn = {
+	          'is-dragging': isDragging
+	        }, _defineProperty(_cn, baseClassName + '--with-children', hasChildren), _defineProperty(_cn, baseClassName + '--children-open', hasChildren && !isCollapsed), _defineProperty(_cn, baseClassName + '--children-collapsed', hasChildren && isCollapsed), _cn))
+	      };
+	
+	      var content = renderItem({ item: item, collapseIcon: collapseIcon, handler: Handler, index: index });
+	
+	      if (!content) return null;
+	
+	      return _react2.default.createElement(
+	        'li',
+	        itemProps,
+	        _react2.default.createElement(
+	          'div',
+	          _extends({ className: 'nestable-item-name' }, rowProps),
+	          content
+	        ),
+	        hasChildren && !isCollapsed && _react2.default.createElement(
+	          'ol',
+	          { className: 'nestable-list' },
+	          item[childrenProp].map(function (item, i) {
+	            return _react2.default.createElement(NestableItem, {
+	              key: i,
+	              index: i,
+	              item: item,
+	              options: options,
+	              isCopy: isCopy
+	            });
+	          })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return NestableItem;
+	}(_react.Component);
+	
+	NestableItem.propTypes = {
+	  item: _propTypes2.default.shape({
+	    id: _propTypes2.default.any.isRequired
+	  }),
+	  isCopy: _propTypes2.default.bool,
+	  options: _propTypes2.default.object,
+	  index: _propTypes2.default.number
+	};
+	exports.default = NestableItem;
 
 /***/ },
 /* 94 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _Nestable = __webpack_require__(92);
+	
+	var _Nestable2 = _interopRequireDefault(_Nestable);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _Nestable2.default;
+
+/***/ },
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11898,7 +12033,7 @@
 	
 	var _reactDom = __webpack_require__(116);
 	
-	var _Nestable = __webpack_require__(93);
+	var _Nestable = __webpack_require__(94);
 	
 	var _Nestable2 = _interopRequireDefault(_Nestable);
 	
@@ -11911,179 +12046,263 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var styles = {
-	    position: "relative",
-	    padding: "10px 15px",
-	    fontSize: "20px",
-	    border: "1px solid #f9fafa",
-	    background: "#f9fafa",
-	    cursor: "pointer"
+	  position: "relative",
+	  padding: "10px 15px",
+	  fontSize: "20px",
+	  border: "1px solid #f9fafa",
+	  background: "#f9fafa",
+	  cursor: "pointer"
 	};
 	var handlerStyles = {
-	    position: "absolute",
-	    top: 0,
-	    left: 0,
-	    width: "10px",
-	    height: "100%",
-	    background: "steelblue",
-	    cursor: "pointer"
+	  position: "absolute",
+	  top: 0,
+	  left: 0,
+	  width: "10px",
+	  height: "100%",
+	  background: "steelblue",
+	  cursor: "pointer"
 	};
 	
-	var ComponentName = function (_Component) {
-	    _inherits(ComponentName, _Component);
+	var items = [{
+	  id: 0,
+	  text: 'Andy'
+	}, {
+	  id: 1,
+	  text: 'Harry',
+	  children: [{
+	    id: 2,
+	    text: 'David'
+	  }]
+	}, {
+	  id: 3,
+	  text: 'Lisa',
+	  children: [{
+	    id: 4,
+	    text: 'Richard'
+	  }]
+	}];
 	
-	    function ComponentName() {
-	        var _ref;
+	var grocery = [{
+	  id: 0,
+	  text: 'Apples',
+	  type: 'fruits'
+	}, {
+	  id: 1,
+	  text: 'Fruit box',
+	  accepts: ['fruits'],
+	  children: [{
+	    id: 2,
+	    text: 'Bananas',
+	    type: 'fruits'
+	  }]
+	}, {
+	  id: 3,
+	  text: 'Box',
+	  accepts: ['fruits', 'sweets'],
+	  children: [{
+	    id: 4,
+	    text: 'Candy',
+	    type: 'sweets'
+	  }]
+	}];
 	
-	        var _temp, _this, _ret;
+	var Example = function (_Component) {
+	  _inherits(Example, _Component);
 	
-	        _classCallCheck(this, ComponentName);
+	  function Example() {
+	    var _ref;
 	
-	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-	            args[_key] = arguments[_key];
-	        }
+	    var _temp, _this, _ret;
 	
-	        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ComponentName.__proto__ || Object.getPrototypeOf(ComponentName)).call.apply(_ref, [this].concat(args))), _this), _this.collapse = function (collapseCase) {
-	            if (_this.refNestable) {
-	                switch (collapseCase) {
-	                    case 0:
-	                        _this.refNestable.collapse('NONE');
-	                        break;
-	                    case 1:
-	                        _this.refNestable.collapse('ALL');
-	                        break;
-	                    case 2:
-	                        _this.refNestable.collapse([1]);
-	                        break;
-	                }
-	            }
-	        }, _this.isCollapsed = function () {
-	            var form = document.forms[0] || null;
+	    _classCallCheck(this, Example);
 	
-	            return form && form.elements["collapsed"].checked;
-	        }, _this.renderItem = function (_ref2) {
-	            var item = _ref2.item,
-	                collapseIcon = _ref2.collapseIcon,
-	                handler = _ref2.handler;
-	
-	            return _react2.default.createElement(
-	                'div',
-	                { style: styles },
-	                handler,
-	                collapseIcon,
-	                item.text
-	            );
-	        }, _temp), _possibleConstructorReturn(_this, _ret);
+	    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+	      args[_key] = arguments[_key];
 	    }
 	
-	    _createClass(ComponentName, [{
-	        key: 'render',
-	        value: function render() {
-	            var _this2 = this;
-	
-	            var items = [{
-	                id: 0,
-	                text: 'Andy'
-	            }, {
-	                id: 1,
-	                text: 'Harry',
-	                children: [{
-	                    id: 2,
-	                    text: 'David'
-	                }]
-	            }, {
-	                id: 3,
-	                text: 'Lisa',
-	                children: [{
-	                    id: 4,
-	                    text: 'Richard'
-	                }]
-	            }];
-	
-	            var handler = _react2.default.createElement('span', { style: handlerStyles });
-	
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Basic example'
-	                ),
-	                _react2.default.createElement(_Nestable2.default, {
-	                    group: '0',
-	                    items: items,
-	                    collapsed: this.isCollapsed(),
-	                    renderItem: this.renderItem,
-	                    ref: function ref(el) {
-	                        return _this2.refNestable = el;
-	                    }
-	                }),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'button',
-	                    { type: 'button', onClick: function onClick(e) {
-	                            return _this2.collapse(0);
-	                        } },
-	                    'Expand all'
-	                ),
-	                _react2.default.createElement(
-	                    'button',
-	                    { type: 'button', onClick: function onClick(e) {
-	                            return _this2.collapse(1);
-	                        } },
-	                    'Collapse all'
-	                ),
-	                _react2.default.createElement(
-	                    'button',
-	                    { type: 'button', onClick: function onClick(e) {
-	                            return _this2.collapse(2);
-	                        } },
-	                    'Collapse Harry only'
-	                ),
-	                _react2.default.createElement(
-	                    'form',
-	                    { style: { display: "inline-block" } },
-	                    _react2.default.createElement(
-	                        'label',
-	                        null,
-	                        _react2.default.createElement('input', { type: 'checkbox', name: 'collapsed', onChange: function onChange(e) {
-	                                return _this2.setState({});
-	                            } }),
-	                        'Collapsed by default'
-	                    )
-	                ),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('hr', null),
-	                _react2.default.createElement('br', null),
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Example with handlers'
-	                ),
-	                _react2.default.createElement(_Nestable2.default, {
-	                    group: '1',
-	                    items: items,
-	                    renderItem: this.renderItem,
-	                    handler: handler
-	                })
-	            );
+	    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Example.__proto__ || Object.getPrototypeOf(Example)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+	      example: 1,
+	      defaultCollapsed: false
+	    }, _this.collapse = function (collapseCase) {
+	      if (_this.refNestable) {
+	        switch (collapseCase) {
+	          case 0:
+	            _this.refNestable.collapse('NONE');
+	            break;
+	          case 1:
+	            _this.refNestable.collapse('ALL');
+	            break;
+	          case 2:
+	            _this.refNestable.collapse([1]);
+	            break;
 	        }
-	    }]);
+	      }
+	    }, _this.isCollapsed = function () {
+	      var form = document.forms[0] || null;
 	
-	    return ComponentName;
+	      return form && form.elements["collapsed"].checked;
+	    }, _this.renderItem = function (_ref2) {
+	      var item = _ref2.item,
+	          collapseIcon = _ref2.collapseIcon,
+	          handler = _ref2.handler;
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { style: styles },
+	        handler,
+	        collapseIcon,
+	        item.text
+	      );
+	    }, _this.renderExampleOne = function () {
+	      var defaultCollapsed = _this.state.defaultCollapsed;
+	
+	      var onDefaultCollapsed = function onDefaultCollapsed() {
+	        return _this.setState({
+	          defaultCollapsed: !defaultCollapsed
+	        });
+	      };
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Basic example'
+	        ),
+	        _react2.default.createElement(_Nestable2.default, {
+	          items: items,
+	          collapsed: defaultCollapsed,
+	          renderItem: _this.renderItem,
+	          ref: function ref(el) {
+	            return _this.refNestable = el;
+	          }
+	        }),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'button', onClick: function onClick() {
+	              return _this.collapse(0);
+	            } },
+	          'Expand all'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'button', onClick: function onClick() {
+	              return _this.collapse(1);
+	            } },
+	          'Collapse all'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'button', onClick: function onClick() {
+	              return _this.collapse(2);
+	            } },
+	          'Collapse Harry only'
+	        ),
+	        _react2.default.createElement(
+	          'form',
+	          { style: { display: "inline-block" } },
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            _react2.default.createElement('input', { type: 'checkbox', name: 'collapsed', onChange: onDefaultCollapsed }),
+	            'Collapsed by default'
+	          )
+	        )
+	      );
+	    }, _this.renderExampleTwo = function () {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Example with handlers'
+	        ),
+	        _react2.default.createElement(_Nestable2.default, {
+	          items: items,
+	          renderItem: _this.renderItem,
+	          handler: _react2.default.createElement('span', { style: handlerStyles })
+	        })
+	      );
+	    }, _this.confirmChange = function (dragItem, destinationParent) {
+	      // move to root level
+	      if (!destinationParent) return true;
+	
+	      return (destinationParent.accepts || []).indexOf(dragItem.type) > -1;
+	    }, _this.renderExampleThree = function () {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'Example with confirmChange'
+	        ),
+	        _react2.default.createElement(_Nestable2.default, {
+	          items: grocery,
+	          renderItem: _this.renderItem,
+	          confirmChange: _this.confirmChange
+	        })
+	      );
+	    }, _temp), _possibleConstructorReturn(_this, _ret);
+	  }
+	
+	  _createClass(Example, [{
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+	
+	      var example = this.state.example;
+	
+	      var onExampleChange = function onExampleChange(e) {
+	        return _this2.setState({ example: +e.target.value });
+	      };
+	
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'select',
+	          { onChange: onExampleChange, value: example },
+	          _react2.default.createElement(
+	            'option',
+	            { value: 1 },
+	            'Basic example'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: 2 },
+	            'Example with handlers'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: 3 },
+	            'Example with confirmChange'
+	          )
+	        ),
+	        _react2.default.createElement('hr', null),
+	        example === 1 && this.renderExampleOne(),
+	        example === 2 && this.renderExampleTwo(),
+	        example === 3 && this.renderExampleThree()
+	      );
+	    }
+	  }]);
+	
+	  return Example;
 	}(_react.Component);
 	
-	(0, _reactDom.render)(_react2.default.createElement(ComponentName, null), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(Example, null), document.getElementById('app'));
 
 /***/ },
-/* 95 */
+/* 96 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -12091,84 +12310,96 @@
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 	
 	var objectType = exports.objectType = function objectType(obj) {
-	    return Object.prototype.toString.call(obj).slice(8, -1);
+	  return Object.prototype.toString.call(obj).slice(8, -1);
 	};
 	var isDefined = exports.isDefined = function isDefined(param) {
-	    return typeof param != "undefined";
+	  return typeof param != "undefined";
 	};
 	var isUndefined = exports.isUndefined = function isUndefined(param) {
-	    return typeof param == "undefined";
+	  return typeof param == "undefined";
 	};
 	var isFunction = exports.isFunction = function isFunction(param) {
-	    return typeof param == "function";
+	  return typeof param == "function";
 	};
 	var isNumber = exports.isNumber = function isNumber(param) {
-	    return typeof param == "number" && !isNaN(param);
+	  return typeof param == "number" && !isNaN(param);
 	};
 	var isString = exports.isString = function isString(str) {
-	    return objectType(str) === "String";
+	  return objectType(str) === "String";
 	};
 	var isArray = exports.isArray = function isArray(arr) {
-	    return objectType(arr) === "Array";
+	  return objectType(arr) === "Array";
 	};
 	
 	var closest = exports.closest = function closest(target, selector) {
-	    // closest(e.target, '.field')
-	    while (target) {
-	        if (target.matches && target.matches(selector)) return target;
-	        target = target.parentNode;
-	    }
-	    return null;
+	  // closest(e.target, '.field')
+	  while (target) {
+	    if (target.matches && target.matches(selector)) return target;
+	    target = target.parentNode;
+	  }
+	  return null;
 	};
 	
 	var getOffsetRect = exports.getOffsetRect = function getOffsetRect(elem) {
-	    // (1)
-	    var box = elem.getBoundingClientRect();
+	  // (1)
+	  var box = elem.getBoundingClientRect();
 	
-	    var body = document.body;
-	    var docElem = document.documentElement;
+	  var body = document.body;
+	  var docElem = document.documentElement;
 	
-	    // (2)
-	    var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
-	    var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
+	  // (2)
+	  var scrollTop = window.pageYOffset || docElem.scrollTop || body.scrollTop;
+	  var scrollLeft = window.pageXOffset || docElem.scrollLeft || body.scrollLeft;
 	
-	    // (3)
-	    var clientTop = docElem.clientTop || body.clientTop || 0;
-	    var clientLeft = docElem.clientLeft || body.clientLeft || 0;
+	  // (3)
+	  var clientTop = docElem.clientTop || body.clientTop || 0;
+	  var clientLeft = docElem.clientLeft || body.clientLeft || 0;
 	
-	    // (4)
-	    var top = box.top + scrollTop - clientTop;
-	    var left = box.left + scrollLeft - clientLeft;
+	  // (4)
+	  var top = box.top + scrollTop - clientTop;
+	  var left = box.left + scrollLeft - clientLeft;
 	
-	    return { top: Math.round(top), left: Math.round(left) };
+	  return { top: Math.round(top), left: Math.round(left) };
+	};
+	
+	var getTotalScroll = exports.getTotalScroll = function getTotalScroll(elem) {
+	  var top = 0;
+	  var left = 0;
+	
+	  while (elem = elem.parentNode) {
+	    top += elem.scrollTop || 0;
+	    left += elem.scrollLeft || 0;
+	  }
+	
+	  return { top: top, left: left };
 	};
 	
 	var getTransformProps = exports.getTransformProps = function getTransformProps(x, y) {
-	    return {
-	        transform: 'translate(' + x + 'px, ' + y + 'px)'
-	    };
+	  return {
+	    transform: 'translate(' + x + 'px, ' + y + 'px)'
+	  };
 	};
 	
 	var listWithChildren = exports.listWithChildren = function listWithChildren(list, childrenProp) {
-	    return list.map(function (item) {
-	        return _extends({}, item, _defineProperty({}, childrenProp, item[childrenProp] ? listWithChildren(item[childrenProp], childrenProp) : []));
-	    });
+	  return list.map(function (item) {
+	    return _extends({}, item, _defineProperty({}, childrenProp, item[childrenProp] ? listWithChildren(item[childrenProp], childrenProp) : []));
+	  });
 	};
 	
 	var getAllNonEmptyNodesIds = exports.getAllNonEmptyNodesIds = function getAllNonEmptyNodesIds(items, childrenProp) {
-	    var childrenIds = [];
-	    var ids = items.filter(function (item) {
-	        return item[childrenProp].length;
-	    }).map(function (item) {
-	        childrenIds = childrenIds.concat(getAllNonEmptyNodesIds(item[childrenProp], childrenProp));
-	        return item.id;
-	    });
+	  var childrenIds = [];
+	  var ids = items.filter(function (item) {
+	    return item[childrenProp].length;
+	  }).map(function (item) {
+	    childrenIds = childrenIds.concat(getAllNonEmptyNodesIds(item[childrenProp], childrenProp));
+	    return item.id;
+	  });
 	
-	    return ids.concat(childrenIds);
+	  return ids.concat(childrenIds);
 	};
 
 /***/ },
-/* 96 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12443,6 +12674,27 @@
 	     */
 	    componentWillUnmount: 'DEFINE_MANY',
 	
+	    /**
+	     * Replacement for (deprecated) `componentWillMount`.
+	     *
+	     * @optional
+	     */
+	    UNSAFE_componentWillMount: 'DEFINE_MANY',
+	
+	    /**
+	     * Replacement for (deprecated) `componentWillReceiveProps`.
+	     *
+	     * @optional
+	     */
+	    UNSAFE_componentWillReceiveProps: 'DEFINE_MANY',
+	
+	    /**
+	     * Replacement for (deprecated) `componentWillUpdate`.
+	     *
+	     * @optional
+	     */
+	    UNSAFE_componentWillUpdate: 'DEFINE_MANY',
+	
 	    // ==== Advanced methods ====
 	
 	    /**
@@ -12456,6 +12708,23 @@
 	     * @overridable
 	     */
 	    updateComponent: 'OVERRIDE_BASE'
+	  };
+	
+	  /**
+	   * Similar to ReactClassInterface but for static methods.
+	   */
+	  var ReactClassStaticInterface = {
+	    /**
+	     * This method is invoked after a component is instantiated and when it
+	     * receives new props. Return an object to update state in response to
+	     * prop changes. Return null to indicate no change to state.
+	     *
+	     * If an object is returned, its keys will be merged into the existing state.
+	     *
+	     * @return {object || null}
+	     * @optional
+	     */
+	    getDerivedStateFromProps: 'DEFINE_MANY_MERGED'
 	  };
 	
 	  /**
@@ -12692,6 +12961,7 @@
 	    if (!statics) {
 	      return;
 	    }
+	
 	    for (var name in statics) {
 	      var property = statics[name];
 	      if (!statics.hasOwnProperty(name)) {
@@ -12708,14 +12978,25 @@
 	        name
 	      );
 	
-	      var isInherited = name in Constructor;
-	      _invariant(
-	        !isInherited,
-	        'ReactClass: You are attempting to define ' +
-	          '`%s` on your component more than once. This conflict may be ' +
-	          'due to a mixin.',
-	        name
-	      );
+	      var isAlreadyDefined = name in Constructor;
+	      if (isAlreadyDefined) {
+	        var specPolicy = ReactClassStaticInterface.hasOwnProperty(name)
+	          ? ReactClassStaticInterface[name]
+	          : null;
+	
+	        _invariant(
+	          specPolicy === 'DEFINE_MANY_MERGED',
+	          'ReactClass: You are attempting to define ' +
+	            '`%s` on your component more than once. This conflict may be ' +
+	            'due to a mixin.',
+	          name
+	        );
+	
+	        Constructor[name] = createMergedResultFunction(Constructor[name], property);
+	
+	        return;
+	      }
+	
 	      Constructor[name] = property;
 	    }
 	  }
@@ -13025,6 +13306,12 @@
 	          'componentWillRecieveProps(). Did you mean componentWillReceiveProps()?',
 	        spec.displayName || 'A component'
 	      );
+	      warning(
+	        !Constructor.prototype.UNSAFE_componentWillRecieveProps,
+	        '%s has a method called UNSAFE_componentWillRecieveProps(). ' +
+	          'Did you mean UNSAFE_componentWillReceiveProps()?',
+	        spec.displayName || 'A component'
+	      );
 	    }
 	
 	    // Reduce time spent doing lookups by setting these on the prototype.
@@ -13045,7 +13332,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 97 */
+/* 98 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13079,7 +13366,7 @@
 	module.exports = camelize;
 
 /***/ },
-/* 98 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13093,7 +13380,7 @@
 	
 	'use strict';
 	
-	var camelize = __webpack_require__(97);
+	var camelize = __webpack_require__(98);
 	
 	var msPattern = /^-ms-/;
 	
@@ -13121,7 +13408,7 @@
 	module.exports = camelizeStyleName;
 
 /***/ },
-/* 99 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13135,7 +13422,7 @@
 	 * 
 	 */
 	
-	var isTextNode = __webpack_require__(107);
+	var isTextNode = __webpack_require__(108);
 	
 	/*eslint-disable no-bitwise */
 	
@@ -13163,7 +13450,7 @@
 	module.exports = containsNode;
 
 /***/ },
-/* 100 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -13293,7 +13580,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 101 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -13311,8 +13598,8 @@
 	
 	var ExecutionEnvironment = __webpack_require__(7);
 	
-	var createArrayFromMixed = __webpack_require__(100);
-	var getMarkupWrap = __webpack_require__(102);
+	var createArrayFromMixed = __webpack_require__(101);
+	var getMarkupWrap = __webpack_require__(103);
 	var invariant = __webpack_require__(2);
 	
 	/**
@@ -13380,7 +13667,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 102 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -13478,7 +13765,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 103 */
+/* 104 */
 /***/ function(module, exports) {
 
 	/**
@@ -13519,7 +13806,7 @@
 	module.exports = getUnboundedScrollPosition;
 
 /***/ },
-/* 104 */
+/* 105 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13554,7 +13841,7 @@
 	module.exports = hyphenate;
 
 /***/ },
-/* 105 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13568,7 +13855,7 @@
 	
 	'use strict';
 	
-	var hyphenate = __webpack_require__(104);
+	var hyphenate = __webpack_require__(105);
 	
 	var msPattern = /^ms-/;
 	
@@ -13595,7 +13882,7 @@
 	module.exports = hyphenateStyleName;
 
 /***/ },
-/* 106 */
+/* 107 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13622,7 +13909,7 @@
 	module.exports = isNode;
 
 /***/ },
-/* 107 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13636,7 +13923,7 @@
 	 * @typechecks
 	 */
 	
-	var isNode = __webpack_require__(106);
+	var isNode = __webpack_require__(107);
 	
 	/**
 	 * @param {*} object The object to check.
@@ -13649,7 +13936,7 @@
 	module.exports = isTextNode;
 
 /***/ },
-/* 108 */
+/* 109 */
 /***/ function(module, exports) {
 
 	/**
@@ -13681,7 +13968,7 @@
 	module.exports = memoizeStringOnly;
 
 /***/ },
-/* 109 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13706,7 +13993,7 @@
 	module.exports = performance || {};
 
 /***/ },
-/* 110 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13720,7 +14007,7 @@
 	 * @typechecks
 	 */
 	
-	var performance = __webpack_require__(109);
+	var performance = __webpack_require__(110);
 	
 	var performanceNow;
 	
@@ -13742,7 +14029,7 @@
 	module.exports = performanceNow;
 
 /***/ },
-/* 111 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -13754,11 +14041,24 @@
 	
 	'use strict';
 	
+	var printWarning = function() {};
+	
 	if (process.env.NODE_ENV !== 'production') {
-	  var invariant = __webpack_require__(2);
-	  var warning = __webpack_require__(3);
-	  var ReactPropTypesSecret = __webpack_require__(38);
+	  var ReactPropTypesSecret = __webpack_require__(39);
 	  var loggedTypeFailures = {};
+	
+	  printWarning = function(text) {
+	    var message = 'Warning: ' + text;
+	    if (typeof console !== 'undefined') {
+	      console.error(message);
+	    }
+	    try {
+	      // --- Welcome to debugging React ---
+	      // This error was thrown as a convenience so that you can use this stack
+	      // to find the callsite that caused this warning to fire.
+	      throw new Error(message);
+	    } catch (x) {}
+	  };
 	}
 	
 	/**
@@ -13783,12 +14083,29 @@
 	        try {
 	          // This is intentionally an invariant that gets caught. It's the same
 	          // behavior as without this statement except with a better message.
-	          invariant(typeof typeSpecs[typeSpecName] === 'function', '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'the `prop-types` package, but received `%s`.', componentName || 'React class', location, typeSpecName, typeof typeSpecs[typeSpecName]);
+	          if (typeof typeSpecs[typeSpecName] !== 'function') {
+	            var err = Error(
+	              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
+	              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+	            );
+	            err.name = 'Invariant Violation';
+	            throw err;
+	          }
 	          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
 	        } catch (ex) {
 	          error = ex;
 	        }
-	        warning(!error || error instanceof Error, '%s: type specification of %s `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error);
+	        if (error && !(error instanceof Error)) {
+	          printWarning(
+	            (componentName || 'React class') + ': type specification of ' +
+	            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
+	            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
+	            'You may have forgotten to pass an argument to the type checker ' +
+	            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
+	            'shape all require an argument).'
+	          )
+	
+	        }
 	        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
 	          // Only monitor this failure once because there tends to be a lot of the
 	          // same error.
@@ -13796,7 +14113,9 @@
 	
 	          var stack = getStack ? getStack() : '';
 	
-	          warning(false, 'Failed %s type: %s%s', location, error.message, stack != null ? stack : '');
+	          printWarning(
+	            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
+	          );
 	        }
 	      }
 	    }
@@ -13808,7 +14127,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 112 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -13820,9 +14139,9 @@
 	
 	'use strict';
 	
-	var emptyFunction = __webpack_require__(9);
-	var invariant = __webpack_require__(2);
-	var ReactPropTypesSecret = __webpack_require__(38);
+	var ReactPropTypesSecret = __webpack_require__(39);
+	
+	function emptyFunction() {}
 	
 	module.exports = function() {
 	  function shim(props, propName, componentName, location, propFullName, secret) {
@@ -13830,12 +14149,13 @@
 	      // It is still safe when called from React.
 	      return;
 	    }
-	    invariant(
-	      false,
+	    var err = new Error(
 	      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
 	      'Use PropTypes.checkPropTypes() to call them. ' +
 	      'Read more at http://fb.me/use-check-prop-types'
 	    );
+	    err.name = 'Invariant Violation';
+	    throw err;
 	  };
 	  shim.isRequired = shim;
 	  function getShim() {
@@ -13870,41 +14190,6 @@
 	  return ReactPropTypes;
 	};
 
-
-/***/ },
-/* 113 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 *
-	 * This source code is licensed under the MIT license found in the
-	 * LICENSE file in the root directory of this source tree.
-	 */
-	
-	if (process.env.NODE_ENV !== 'production') {
-	  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-	    Symbol.for &&
-	    Symbol.for('react.element')) ||
-	    0xeac7;
-	
-	  var isValidElement = function(object) {
-	    return typeof object === 'object' &&
-	      object !== null &&
-	      object.$$typeof === REACT_ELEMENT_TYPE;
-	  };
-	
-	  // By explicitly using `prop-types` you are opting into new development behavior.
-	  // http://fb.me/prop-types-in-prod
-	  var throwOnDirectAccess = true;
-	  module.exports = __webpack_require__(60)(isValidElement, throwOnDirectAccess);
-	} else {
-	  // By explicitly using `prop-types` you are opting into new production behavior.
-	  // http://fb.me/prop-types-in-prod
-	  module.exports = __webpack_require__(112)();
-	}
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
 /* 114 */
@@ -14209,7 +14494,7 @@
 	
 	var ReactDOMComponentTree = __webpack_require__(6);
 	
-	var focusNode = __webpack_require__(57);
+	var focusNode = __webpack_require__(58);
 	
 	var AutoFocusUtils = {
 	  focusDOMComponent: function () {
@@ -14619,14 +14904,14 @@
 	
 	'use strict';
 	
-	var CSSProperty = __webpack_require__(61);
+	var CSSProperty = __webpack_require__(62);
 	var ExecutionEnvironment = __webpack_require__(7);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	
-	var camelizeStyleName = __webpack_require__(98);
+	var camelizeStyleName = __webpack_require__(99);
 	var dangerousStyleValue = __webpack_require__(178);
-	var hyphenateStyleName = __webpack_require__(105);
-	var memoizeStringOnly = __webpack_require__(108);
+	var hyphenateStyleName = __webpack_require__(106);
+	var memoizeStringOnly = __webpack_require__(109);
 	var warning = __webpack_require__(3);
 	
 	var processStyleName = memoizeStringOnly(function (styleName) {
@@ -14844,10 +15129,10 @@
 	var ReactUpdates = __webpack_require__(11);
 	var SyntheticEvent = __webpack_require__(13);
 	
-	var inputValueTracking = __webpack_require__(78);
-	var getEventTarget = __webpack_require__(50);
-	var isEventSupported = __webpack_require__(51);
-	var isTextInputElement = __webpack_require__(80);
+	var inputValueTracking = __webpack_require__(79);
+	var getEventTarget = __webpack_require__(51);
+	var isEventSupported = __webpack_require__(52);
+	var isTextInputElement = __webpack_require__(81);
 	
 	var eventTypes = {
 	  change: {
@@ -15156,8 +15441,8 @@
 	var DOMLazyTree = __webpack_require__(17);
 	var ExecutionEnvironment = __webpack_require__(7);
 	
-	var createNodesFromMarkup = __webpack_require__(101);
-	var emptyFunction = __webpack_require__(9);
+	var createNodesFromMarkup = __webpack_require__(102);
+	var emptyFunction = __webpack_require__(10);
 	var invariant = __webpack_require__(2);
 	
 	var Danger = {
@@ -15332,7 +15617,7 @@
 	
 	var PooledClass = __webpack_require__(15);
 	
-	var getTextContentAccessor = __webpack_require__(77);
+	var getTextContentAccessor = __webpack_require__(78);
 	
 	/**
 	 * This helper class stores information about text content of a target node,
@@ -15666,10 +15951,10 @@
 	
 	var ReactReconciler = __webpack_require__(18);
 	
-	var instantiateReactComponent = __webpack_require__(79);
-	var KeyEscapeUtils = __webpack_require__(42);
-	var shouldUpdateReactComponent = __webpack_require__(52);
-	var traverseAllChildren = __webpack_require__(82);
+	var instantiateReactComponent = __webpack_require__(80);
+	var KeyEscapeUtils = __webpack_require__(43);
+	var shouldUpdateReactComponent = __webpack_require__(53);
+	var traverseAllChildren = __webpack_require__(83);
 	var warning = __webpack_require__(3);
 	
 	var ReactComponentTreeHook;
@@ -15820,7 +16105,7 @@
 	
 	'use strict';
 	
-	var DOMChildrenOperations = __webpack_require__(39);
+	var DOMChildrenOperations = __webpack_require__(40);
 	var ReactDOMIDOperations = __webpack_require__(135);
 	
 	/**
@@ -15854,12 +16139,12 @@
 	    _assign = __webpack_require__(5);
 	
 	var React = __webpack_require__(19);
-	var ReactComponentEnvironment = __webpack_require__(44);
+	var ReactComponentEnvironment = __webpack_require__(45);
 	var ReactCurrentOwner = __webpack_require__(12);
-	var ReactErrorUtils = __webpack_require__(45);
+	var ReactErrorUtils = __webpack_require__(46);
 	var ReactInstanceMap = __webpack_require__(23);
-	var ReactInstrumentation = __webpack_require__(10);
-	var ReactNodeTypes = __webpack_require__(71);
+	var ReactInstrumentation = __webpack_require__(9);
+	var ReactNodeTypes = __webpack_require__(72);
 	var ReactReconciler = __webpack_require__(18);
 	
 	if (process.env.NODE_ENV !== 'production') {
@@ -15869,7 +16154,7 @@
 	var emptyObject = __webpack_require__(25);
 	var invariant = __webpack_require__(2);
 	var shallowEqual = __webpack_require__(26);
-	var shouldUpdateReactComponent = __webpack_require__(52);
+	var shouldUpdateReactComponent = __webpack_require__(53);
 	var warning = __webpack_require__(3);
 	
 	var CompositeTypes = {
@@ -16757,13 +17042,13 @@
 	
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactDefaultInjection = __webpack_require__(147);
-	var ReactMount = __webpack_require__(70);
+	var ReactMount = __webpack_require__(71);
 	var ReactReconciler = __webpack_require__(18);
 	var ReactUpdates = __webpack_require__(11);
 	var ReactVersion = __webpack_require__(162);
 	
 	var findDOMNode = __webpack_require__(179);
-	var getHostComponentFromComposite = __webpack_require__(76);
+	var getHostComponentFromComposite = __webpack_require__(77);
 	var renderSubtreeIntoContainer = __webpack_require__(186);
 	var warning = __webpack_require__(3);
 	
@@ -16840,7 +17125,7 @@
 	}
 	
 	if (process.env.NODE_ENV !== 'production') {
-	  var ReactInstrumentation = __webpack_require__(10);
+	  var ReactInstrumentation = __webpack_require__(9);
 	  var ReactDOMUnknownPropertyHook = __webpack_require__(144);
 	  var ReactDOMNullInputValuePropHook = __webpack_require__(138);
 	  var ReactDOMInvalidARIAHook = __webpack_require__(137);
@@ -16875,29 +17160,29 @@
 	var AutoFocusUtils = __webpack_require__(118);
 	var CSSPropertyOperations = __webpack_require__(120);
 	var DOMLazyTree = __webpack_require__(17);
-	var DOMNamespaces = __webpack_require__(40);
+	var DOMNamespaces = __webpack_require__(41);
 	var DOMProperty = __webpack_require__(14);
-	var DOMPropertyOperations = __webpack_require__(63);
+	var DOMPropertyOperations = __webpack_require__(64);
 	var EventPluginHub = __webpack_require__(21);
 	var EventPluginRegistry = __webpack_require__(27);
 	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactDOMComponentFlags = __webpack_require__(64);
+	var ReactDOMComponentFlags = __webpack_require__(65);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactDOMInput = __webpack_require__(136);
 	var ReactDOMOption = __webpack_require__(139);
-	var ReactDOMSelect = __webpack_require__(65);
+	var ReactDOMSelect = __webpack_require__(66);
 	var ReactDOMTextarea = __webpack_require__(142);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	var ReactMultiChild = __webpack_require__(155);
 	var ReactServerRenderingTransaction = __webpack_require__(160);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	var escapeTextContentForBrowser = __webpack_require__(31);
 	var invariant = __webpack_require__(2);
-	var isEventSupported = __webpack_require__(51);
+	var isEventSupported = __webpack_require__(52);
 	var shallowEqual = __webpack_require__(26);
-	var inputValueTracking = __webpack_require__(78);
-	var validateDOMNesting = __webpack_require__(53);
+	var inputValueTracking = __webpack_require__(79);
+	var validateDOMNesting = __webpack_require__(54);
 	var warning = __webpack_require__(3);
 	
 	var Flags = ReactDOMComponentFlags;
@@ -17884,7 +18169,7 @@
 	
 	'use strict';
 	
-	var validateDOMNesting = __webpack_require__(53);
+	var validateDOMNesting = __webpack_require__(54);
 	
 	var DOC_NODE_TYPE = 9;
 	
@@ -18003,7 +18288,7 @@
 	
 	'use strict';
 	
-	var DOMChildrenOperations = __webpack_require__(39);
+	var DOMChildrenOperations = __webpack_require__(40);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	
 	/**
@@ -18041,8 +18326,8 @@
 	var _prodInvariant = __webpack_require__(4),
 	    _assign = __webpack_require__(5);
 	
-	var DOMPropertyOperations = __webpack_require__(63);
-	var LinkedValueUtils = __webpack_require__(43);
+	var DOMPropertyOperations = __webpack_require__(64);
+	var LinkedValueUtils = __webpack_require__(44);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactUpdates = __webpack_require__(11);
 	
@@ -18474,7 +18759,7 @@
 	
 	var React = __webpack_require__(19);
 	var ReactDOMComponentTree = __webpack_require__(6);
-	var ReactDOMSelect = __webpack_require__(65);
+	var ReactDOMSelect = __webpack_require__(66);
 	
 	var warning = __webpack_require__(3);
 	var didWarnInvalidOptionChildren = false;
@@ -18598,7 +18883,7 @@
 	var ExecutionEnvironment = __webpack_require__(7);
 	
 	var getNodeForCharacterOffset = __webpack_require__(183);
-	var getTextContentAccessor = __webpack_require__(77);
+	var getTextContentAccessor = __webpack_require__(78);
 	
 	/**
 	 * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -18812,13 +19097,13 @@
 	var _prodInvariant = __webpack_require__(4),
 	    _assign = __webpack_require__(5);
 	
-	var DOMChildrenOperations = __webpack_require__(39);
+	var DOMChildrenOperations = __webpack_require__(40);
 	var DOMLazyTree = __webpack_require__(17);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	
 	var escapeTextContentForBrowser = __webpack_require__(31);
 	var invariant = __webpack_require__(2);
-	var validateDOMNesting = __webpack_require__(53);
+	var validateDOMNesting = __webpack_require__(54);
 	
 	/**
 	 * Text nodes violate a couple assumptions that React makes about components:
@@ -18977,7 +19262,7 @@
 	var _prodInvariant = __webpack_require__(4),
 	    _assign = __webpack_require__(5);
 	
-	var LinkedValueUtils = __webpack_require__(43);
+	var LinkedValueUtils = __webpack_require__(44);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactUpdates = __webpack_require__(11);
 	
@@ -19397,7 +19682,7 @@
 	var ReactComponentTreeHook = __webpack_require__(8);
 	var ExecutionEnvironment = __webpack_require__(7);
 	
-	var performanceNow = __webpack_require__(110);
+	var performanceNow = __webpack_require__(111);
 	var warning = __webpack_require__(3);
 	
 	var hooks = [];
@@ -19760,7 +20045,7 @@
 	var ReactUpdates = __webpack_require__(11);
 	var Transaction = __webpack_require__(30);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	
 	var RESET_BATCHED_UPDATES = {
 	  initialize: emptyFunction,
@@ -19971,14 +20256,14 @@
 	
 	var _assign = __webpack_require__(5);
 	
-	var EventListener = __webpack_require__(56);
+	var EventListener = __webpack_require__(57);
 	var ExecutionEnvironment = __webpack_require__(7);
 	var PooledClass = __webpack_require__(15);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactUpdates = __webpack_require__(11);
 	
-	var getEventTarget = __webpack_require__(50);
-	var getUnboundedScrollPosition = __webpack_require__(103);
+	var getEventTarget = __webpack_require__(51);
+	var getUnboundedScrollPosition = __webpack_require__(104);
 	
 	/**
 	 * Find the deepest React component completely containing the root of the
@@ -20164,11 +20449,11 @@
 	
 	var DOMProperty = __webpack_require__(14);
 	var EventPluginHub = __webpack_require__(21);
-	var EventPluginUtils = __webpack_require__(41);
-	var ReactComponentEnvironment = __webpack_require__(44);
-	var ReactEmptyComponent = __webpack_require__(66);
+	var EventPluginUtils = __webpack_require__(42);
+	var ReactComponentEnvironment = __webpack_require__(45);
+	var ReactEmptyComponent = __webpack_require__(67);
 	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactHostComponent = __webpack_require__(68);
+	var ReactHostComponent = __webpack_require__(69);
 	var ReactUpdates = __webpack_require__(11);
 	
 	var ReactInjection = {
@@ -20292,15 +20577,15 @@
 	
 	var _prodInvariant = __webpack_require__(4);
 	
-	var ReactComponentEnvironment = __webpack_require__(44);
+	var ReactComponentEnvironment = __webpack_require__(45);
 	var ReactInstanceMap = __webpack_require__(23);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	
 	var ReactCurrentOwner = __webpack_require__(12);
 	var ReactReconciler = __webpack_require__(18);
 	var ReactChildReconciler = __webpack_require__(127);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	var flattenChildren = __webpack_require__(180);
 	var invariant = __webpack_require__(2);
 	
@@ -20865,13 +21150,13 @@
 	
 	var _assign = __webpack_require__(5);
 	
-	var CallbackQueue = __webpack_require__(62);
+	var CallbackQueue = __webpack_require__(63);
 	var PooledClass = __webpack_require__(15);
 	var ReactBrowserEventEmitter = __webpack_require__(28);
-	var ReactInputSelection = __webpack_require__(69);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInputSelection = __webpack_require__(70);
+	var ReactInstrumentation = __webpack_require__(9);
 	var Transaction = __webpack_require__(30);
-	var ReactUpdateQueue = __webpack_require__(46);
+	var ReactUpdateQueue = __webpack_require__(47);
 	
 	/**
 	 * Ensures that, when possible, the selection range (currently selected text
@@ -21139,7 +21424,7 @@
 	
 	var PooledClass = __webpack_require__(15);
 	var Transaction = __webpack_require__(30);
-	var ReactInstrumentation = __webpack_require__(10);
+	var ReactInstrumentation = __webpack_require__(9);
 	var ReactServerUpdateQueue = __webpack_require__(161);
 	
 	/**
@@ -21231,7 +21516,7 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var ReactUpdateQueue = __webpack_require__(46);
+	var ReactUpdateQueue = __webpack_require__(47);
 	
 	var warning = __webpack_require__(3);
 	
@@ -21693,11 +21978,11 @@
 	var EventPropagators = __webpack_require__(22);
 	var ExecutionEnvironment = __webpack_require__(7);
 	var ReactDOMComponentTree = __webpack_require__(6);
-	var ReactInputSelection = __webpack_require__(69);
+	var ReactInputSelection = __webpack_require__(70);
 	var SyntheticEvent = __webpack_require__(13);
 	
-	var getActiveElement = __webpack_require__(58);
-	var isTextInputElement = __webpack_require__(80);
+	var getActiveElement = __webpack_require__(59);
+	var isTextInputElement = __webpack_require__(81);
 	var shallowEqual = __webpack_require__(26);
 	
 	var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
@@ -21883,7 +22168,7 @@
 	
 	var _prodInvariant = __webpack_require__(4);
 	
-	var EventListener = __webpack_require__(56);
+	var EventListener = __webpack_require__(57);
 	var EventPropagators = __webpack_require__(22);
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var SyntheticAnimationEvent = __webpack_require__(166);
@@ -21898,8 +22183,8 @@
 	var SyntheticUIEvent = __webpack_require__(24);
 	var SyntheticWheelEvent = __webpack_require__(175);
 	
-	var emptyFunction = __webpack_require__(9);
-	var getEventCharCode = __webpack_require__(48);
+	var emptyFunction = __webpack_require__(10);
+	var getEventCharCode = __webpack_require__(49);
 	var invariant = __webpack_require__(2);
 	
 	/**
@@ -22345,9 +22630,9 @@
 	
 	var SyntheticUIEvent = __webpack_require__(24);
 	
-	var getEventCharCode = __webpack_require__(48);
+	var getEventCharCode = __webpack_require__(49);
 	var getEventKey = __webpack_require__(181);
-	var getEventModifierState = __webpack_require__(49);
+	var getEventModifierState = __webpack_require__(50);
 	
 	/**
 	 * @interface KeyboardEvent
@@ -22431,7 +22716,7 @@
 	
 	var SyntheticUIEvent = __webpack_require__(24);
 	
-	var getEventModifierState = __webpack_require__(49);
+	var getEventModifierState = __webpack_require__(50);
 	
 	/**
 	 * @interface TouchEvent
@@ -22619,7 +22904,7 @@
 	var _prodInvariant = __webpack_require__(4);
 	
 	var ReactPropTypeLocationNames = __webpack_require__(157);
-	var ReactPropTypesSecret = __webpack_require__(72);
+	var ReactPropTypesSecret = __webpack_require__(73);
 	
 	var invariant = __webpack_require__(2);
 	var warning = __webpack_require__(3);
@@ -22706,7 +22991,7 @@
 	
 	'use strict';
 	
-	var CSSProperty = __webpack_require__(61);
+	var CSSProperty = __webpack_require__(62);
 	var warning = __webpack_require__(3);
 	
 	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -22794,7 +23079,7 @@
 	var ReactDOMComponentTree = __webpack_require__(6);
 	var ReactInstanceMap = __webpack_require__(23);
 	
-	var getHostComponentFromComposite = __webpack_require__(76);
+	var getHostComponentFromComposite = __webpack_require__(77);
 	var invariant = __webpack_require__(2);
 	var warning = __webpack_require__(3);
 	
@@ -22852,8 +23137,8 @@
 	
 	'use strict';
 	
-	var KeyEscapeUtils = __webpack_require__(42);
-	var traverseAllChildren = __webpack_require__(82);
+	var KeyEscapeUtils = __webpack_require__(43);
+	var traverseAllChildren = __webpack_require__(83);
 	var warning = __webpack_require__(3);
 	
 	var ReactComponentTreeHook;
@@ -22930,7 +23215,7 @@
 	
 	'use strict';
 	
-	var getEventCharCode = __webpack_require__(48);
+	var getEventCharCode = __webpack_require__(49);
 	
 	/**
 	 * Normalization of deprecated HTML5 `key` values
@@ -23294,7 +23579,7 @@
 	
 	'use strict';
 	
-	var ReactMount = __webpack_require__(70);
+	var ReactMount = __webpack_require__(71);
 	
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
@@ -23491,7 +23776,7 @@
 	var PooledClass = __webpack_require__(188);
 	var ReactElement = __webpack_require__(16);
 	
-	var emptyFunction = __webpack_require__(9);
+	var emptyFunction = __webpack_require__(10);
 	var traverseAllChildren = __webpack_require__(199);
 	
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
@@ -23690,7 +23975,7 @@
 	 */
 	var createDOMFactory = ReactElement.createFactory;
 	if (process.env.NODE_ENV !== 'production') {
-	  var ReactElementValidator = __webpack_require__(85);
+	  var ReactElementValidator = __webpack_require__(86);
 	  createDOMFactory = ReactElementValidator.createFactory;
 	}
 	
@@ -23884,7 +24169,7 @@
 	var _require = __webpack_require__(16),
 	    isValidElement = _require.isValidElement;
 	
-	var factory = __webpack_require__(59);
+	var factory = __webpack_require__(60);
 	
 	module.exports = factory(isValidElement);
 
@@ -24027,14 +24312,14 @@
 	
 	'use strict';
 	
-	var _require = __webpack_require__(83),
+	var _require = __webpack_require__(84),
 	    Component = _require.Component;
 	
 	var _require2 = __webpack_require__(16),
 	    isValidElement = _require2.isValidElement;
 	
-	var ReactNoopUpdateQueue = __webpack_require__(86);
-	var factory = __webpack_require__(96);
+	var ReactNoopUpdateQueue = __webpack_require__(87);
+	var factory = __webpack_require__(97);
 	
 	module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
@@ -24119,9 +24404,9 @@
 	var _prodInvariant = __webpack_require__(20);
 	
 	var ReactCurrentOwner = __webpack_require__(12);
-	var REACT_ELEMENT_TYPE = __webpack_require__(84);
+	var REACT_ELEMENT_TYPE = __webpack_require__(85);
 	
-	var getIteratorFn = __webpack_require__(87);
+	var getIteratorFn = __webpack_require__(88);
 	var invariant = __webpack_require__(2);
 	var KeyEscapeUtils = __webpack_require__(187);
 	var warning = __webpack_require__(3);
@@ -24291,7 +24576,7 @@
 	var content = __webpack_require__(36);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(88)(content, {});
+	var update = __webpack_require__(89)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
@@ -24317,7 +24602,7 @@
 	var content = __webpack_require__(37);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(88)(content, {});
+	var update = __webpack_require__(89)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
